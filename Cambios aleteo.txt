@@ -1,0 +1,39 @@
+// Cambios inicio
+//ysh
+-> navegador total ancho a la pagina - HECHO 
+-> tamaño letras mas grandes - HECHO
+-> fuente ayathuna - PENDIENTE
+-> Botón flotante para #aleteo hacia el futuro - HECHO (Pendiente redireccionamiento)
+
+// Serie Web 
+-> navegador de capitulos lateral derecha (dos pestañas con sus respectivos capítulos)
+-> todo el vídeo en la pantalla principal
+
+
+// Cambios PODCAST
+-> Menu de podcas es lateral
+-> lista de repoducción en la sección de la página (Yo me entiendo)
+
+// Periodico digital
+-> mirar imágenes
+
+
+// Videojuego 
+-> Imagen alusiva y link de descarga
+
+// Organizaciones
+-> Basarce en las tres cartas iniciales
+
+
+// Apyanos 
+-> texto descriptivo con Imagen
+-> video de Youtube y link para poder ir a la vaki
+-> Comentarios 
+
+
+
+// Aleteo hacia el futuro
+-> ventanas tipo capsulas, una tras otra 
+-> sólo título y texto e imagen
+-> orden de ultimo a primero
+-> solo scroll
