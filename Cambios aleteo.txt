@@ -1,5 +1,5 @@
 // Cambios inicio
-//ysh
+
 -> navegador total ancho a la pagina - HECHO 
 -> tamaño letras mas grandes - HECHO
 -> fuente ayathuna - PENDIENTE
