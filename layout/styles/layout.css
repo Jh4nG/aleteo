@@ -627,3 +627,12 @@ table a, #comments a{background-color:inherit;}
 		padding: 15px;
 		font-size: 20px;
 	}
+
+	@media (min-width: 1200px){
+		.contentDivPodcast{
+			max-width: 85% !important;
+			margin-right: auto;
+			margin-left: auto;
+			padding: 80px 0;
+		}
+	}
