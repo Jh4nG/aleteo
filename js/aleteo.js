@@ -40,11 +40,21 @@ var _Aleteo = (function (){
         var data = {"metodo":"logoFooter"};
         var type = 'post';
         $.when(ajaxJson(ruta,data,type)).done((data)=>{
-            var text = '<li><a href="index.php"><i class="fa fa-lg fa-home"></i></a></li>';
+            var text = '';
             $.each(data,(i,e)=>{
+                text += '<li>';
                 if(i<=e.cant_reg){ 
-                    text += '<li><a href="'+e.sec_link_redirect+'" target="_blank"><img src="images/img-project/'+e.sec_img+'" style="max-width:100px;"></a></li>';
+                    a = false;
+                    if(e.sec_link_redirect != ''){
+                        text += '<a href="'+e.sec_link_redirect+'" target="_blank">';    
+                        a = true;
+                    }
+                    text += '<img src="images/img-project/'+e.sec_img+'" style="max-width:50%;">';
                 }
+                if(a){
+                    text += '</a>';
+                }
+                text += '</li>';
             });
             $('#contentFooter').html(text);
         });

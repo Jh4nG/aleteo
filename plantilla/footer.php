@@ -3,9 +3,8 @@
 <div class="wrapper row4 bgded overlay" style="">
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <h3 class="heading" id="nomClt"></h3>
     <nav>
-      <ul class="nospace inline pushright uppercase" id="contentFooter"></ul>
+      <ul class="nospace inline pushright uppercase" id="contentFooter" style="background: #fff;"></ul>
     </nav>
     <ul class="faico clear" id="contentSocial"></ul>
     <!-- ################################################################################################ -->

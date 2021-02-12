@@ -108,7 +108,7 @@ File: Layout CSS
 
 /* Footer
 --------------------------------------------------------------------------------------------------------------- */
-#footer{padding:80px 0; text-align:center;}
+#footer{padding: 2px 0 25px 0; text-align:center;}
 
 #footer .heading, #footer ul{margin-bottom:30px;}
 #footer > ul:last-of-type{margin-bottom:0;}
@@ -346,6 +346,13 @@ table a, #comments a{background-color:inherit;}
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (min-width:978px){
 	.hoc{max-width:95%;}
+}
+
+@media screen and (min-width: 978px){
+	footer.hoc {
+    	max-width: 100% !important;
+	}
+
 }
 
 /* Mobile Devices
