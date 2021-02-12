@@ -5,6 +5,18 @@ class Podcast extends Conexion{
     public function __construct(){
         parent::__construct();
     }
+
+    public function listarPodcast()
+    {
+        $sql = "SELECT * FROM podcast ORDER BY fecha_creacion DESC";
+        $rdb = $this->con_aleteo->prepare($sql);
+        if($rdb->execute()){
+            $obj = $rdb -> fetchAll(PDO::FETCH_OBJ);
+            echo json_encode($obj);
+        }else{
+            echo json_encode(false);
+        }
+    }
 }
 
 
