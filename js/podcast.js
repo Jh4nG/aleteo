@@ -20,7 +20,7 @@ var _PodcastWeb = (function (){
                                             '<div class="card-body">'+
                                                 '<h5 class="card-title">'+val.nombre+'</h5>'+
                                                 '<p class="card-text">'+val.descripcion+'</p>'+
-                                                '<audio src="" controls autoplay loop style="width:100%">'+
+                                                '<audio src="audios/'+val.link+'" controls loop style="width:100%">'+
                                                 '<p>Tu navegador no implementa el elemento audio</p>'+
                                                 '</audio>'+
                                             '</div>'+
@@ -38,7 +38,7 @@ var _PodcastWeb = (function (){
                                             '<div class="card-body">'+
                                                 '<h5 class="card-title">'+val.nombre+'</h5>'+
                                                 '<p class="card-text">'+val.descripcion+'</p>'+
-                                                '<audio src="" controls autoplay loop style="width:100%">'+
+                                                '<audio src="audios/'+val.link+'" controls loop style="width:100%">'+
                                                 '<p>Tu navegador no implementa el elemento audio</p>'+
                                                 '</audio>'+
                                             '</div>'+
@@ -57,7 +57,7 @@ var _PodcastWeb = (function (){
                                             '<div class="card-body">'+
                                                 '<h5 class="card-title">'+val.nombre+'</h5>'+
                                                 '<p class="card-text">'+val.descripcion+'</p>'+
-                                                '<audio src="" controls autoplay loop style="width:100%">'+
+                                                '<audio src="audios/'+val.link+'" controls loop style="width:100%">'+
                                                 '<p>Tu navegador no implementa el elemento audio</p>'+
                                                 '</audio>'+
                                             '</div>'+
