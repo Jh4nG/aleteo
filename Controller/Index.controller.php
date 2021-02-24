@@ -84,6 +84,46 @@ class Index extends Conexion{
             echo json_encode(false);
         }
     }
+
+    /**
+     * Trae el contenido descriptivo del proyecto (Semi footer)
+     */
+    public function contenidoDescipcion()
+    {
+        $sqlFrases ="SELECT sec_titulo,sec_desc,cant_reg
+            FROM categoria c,secciones s 
+            WHERE c.id = s.id_categoria
+            AND c.id = 7
+            AND s.sec_estado = 1
+            $this->order
+            LIMIT 1"; // -> Frases Incio
+        $rdb = $this->con_aleteo->prepare($sqlFrases);
+        if($rdb->execute()){
+            echo json_encode($rdb -> fetchAll(PDO::FETCH_OBJ));
+        }else{
+            echo json_encode(false);
+        }
+    }
+
+    /**
+     * Trae el contenido de suscripción
+     */
+    public function contenidoSuscripcion()
+    {
+        $sqlFrases ="SELECT sec_titulo,sec_desc,cant_reg
+            FROM categoria c,secciones s 
+            WHERE c.id = s.id_categoria
+            AND c.id = 8
+            AND s.sec_estado = 1
+            $this->order
+            LIMIT 1"; // -> Frases Incio
+        $rdb = $this->con_aleteo->prepare($sqlFrases);
+        if($rdb->execute()){
+            echo json_encode($rdb -> fetchAll(PDO::FETCH_OBJ));
+        }else{
+            echo json_encode(false);
+        }
+    }
 }
 
 if(isset($_POST) && count($_POST)>0){

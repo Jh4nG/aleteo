@@ -14,6 +14,10 @@ class Conexion {
         self::iniciar();
     }
 
+        
+    /**
+     * 
+     */
     private function iniciar(){
         try {
             $this->con_aleteo = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->user, $this->password);

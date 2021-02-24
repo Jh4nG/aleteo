@@ -5,6 +5,8 @@ var _Index = (function (){
         traerInfoClt();
         threeCard();
         frasesInicio();
+        contenidoDescipcion();
+        contenidoSuscripcion();
     }
 
     /** Traer info Cliente */
@@ -54,19 +56,39 @@ var _Index = (function (){
         var type = 'post';
         $.when(ajaxJson(ruta,data,type)).done((data)=>{
         text = '<img src="images/img-project/'+data[0]['sec_img']+'">';
-            // $.each(data,(i,e)=>{
-                // if(i<=e.cant_reg){ 
-                //     text += '<li class="three_third first">'+
-                //         '<article><a href="#"><i class="btmspace-30 icon '+e.sec_icon+'"></i></a>'+
-                //         '<h6 class="heading font-x1">'+e.sec_titulo+'</h6>'+
-                //         '<p>'+e.sec_desc+'</p>'+
-                //         '</article>'+
-                //     '</li>';
-                // }
-            // });
             $('#contectFrases').html(text);
         });
     }
+
+    /** Trae contenido de Descipción */
+    var contenidoDescipcion = () =>{
+        var ruta = 'Controller/Index.controller.php';
+        var data = {"metodo":"contenidoDescipcion"};
+        var type = 'post';
+        var text;
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            $('#titleSobreContenido').html(data[0].sec_titulo);
+            text = data[0].sec_desc.split('\n');
+            $.each(text,(i,e)=>{
+                $('#textSobreContenido').append('<p align="justify">'+e+'</p>');
+            });
+        });
+    }
+
+    /** Trae contenido de suscricpción */
+    var contenidoSuscripcion = () =>{
+        var ruta = 'Controller/Index.controller.php';
+        var data = {"metodo":"contenidoSuscripcion"};
+        var type = 'post';
+        var text;
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            text = data[0].sec_desc.split('\n');
+            $.each(text,(i,e)=>{
+                $('#textSuscribete').append('<p align="justify">'+e+'</p>');
+            });
+        });
+    }
+
     return {
         iniciar:iniciar
     }

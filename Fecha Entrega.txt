@@ -1,8 +1,8 @@
 /// Fehcas de entrega 
--- PODCAST 28 Febrero.                  -> Jhon
+-- Inicio 28 Febrero.                   -> Jhon
 -- PODCAST 28 Febrero.                  -> Fabian
 -- Periódico Digita 28 Febrero.         -> Jhon
--- Organizaciones 10 Febrero.           -> 
+-- Organizaciones 10 Febrero.           -> Fabian
 -- Nuestro Futuro Presente 10 Marzo.    -> 
 -- Apoyanos 15 Marzo.                   -> 
 -- Serie Web 31 Marzo.                  -> 
