@@ -25,7 +25,7 @@
                   <li id="Podcast"><a href="podcast.php">Podcast</a></li>
                   <li id="periodicoDigital"><a href="#">Periódico Digital</a></li>
                   <li id="videoJuego"><a href="#">Video Juego</a></li>
-                  <li id="Organizaciones"><a href="#">Organizaciones</a></li>
+                  <li id="Organizaciones"><a href="organizaciones.php">Organizaciones</a></li>
                   <li id="Apóyanos"><a href="#">Apóyanos</a></li>
                 </ul>
             </div>
