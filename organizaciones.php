@@ -124,9 +124,9 @@
     
     
     
-      <?php require_once 'plantilla/footer.php'; ?>
+    <?php require_once 'plantilla/footer.php'; ?>
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>
-    <script type="text/javascript" src="js/podcast.js"></script>
+    <script type="text/javascript" src="js/organizaciones.js"></script>
   </body>
 </html>

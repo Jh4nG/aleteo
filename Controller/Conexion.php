@@ -16,7 +16,9 @@ class Conexion {
 
         
     /**
-     * 
+     * iniciar
+     *
+     * @return void
      */
     private function iniciar(){
         try {
