@@ -642,4 +642,18 @@ table a, #comments a{background-color:inherit;}
 			margin-left: auto;
 			padding: 80px 0;
 		}
+
+		.card{
+			/* width: 18rem; */
+			margin-bottom:10px;
+			height: 238px;
+			width: 83%;
+		}
+	}
+
+	@media(max-width: 400px){
+		.nav-link {
+			display: block;
+			padding: 1.5rem 1rem;
+		}
 	}
