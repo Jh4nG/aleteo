@@ -76,8 +76,21 @@ var _Aleteo = (function (){
         });
     }
 
+    var verificarConstr = (id)=>{
+        var ruta = 'Controller/Aleteo.controller.php';
+        var data = {"metodo":"getConstruc","parametros":{'id':btoa(id)}};
+        var type = 'post';
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            if(data[0].estado == 0){
+                // Redirect
+                window.location.href = "construccion.php?p="+btoa(id);
+            }
+        });
+    }
+
     return {
-        iniciar:iniciar
+        iniciar:iniciar,
+        verificarConstr:verificarConstr
     }
 })(jQuery);
 $(document).ready(function(){

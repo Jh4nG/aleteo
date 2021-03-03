@@ -87,6 +87,16 @@ class Index extends Conexion{
             return true;
         }
     }
+
+    public function getConstruc($parametro){
+        $sqlFrases ="SELECT * FROM construccion WHERE id_constr = ".base64_decode($parametro['id']); // -> Logos Footer
+        $rdb = $this->con_aleteo->prepare($sqlFrases);
+        if($rdb->execute()){
+            echo json_encode($rdb -> fetchAll(PDO::FETCH_OBJ));
+        }else{
+            echo json_encode(false);
+        }
+    }
 }
 
 if(isset($_POST) && count($_POST)>0){

@@ -21,12 +21,12 @@
               <div class="classynav">
                 <ul class="clear">
                   <li id="Inicio"><a href="index.php">Inicio</a></li>
-                  <li id="Serie"><a href="#">Serie Web</a></li>
+                  <li id="Serie"><a href="serieweb.php">Serie Web</a></li>
                   <li id="Podcast"><a href="podcast.php">Podcast</a></li>
-                  <li id="periodicoDigital"><a href="#">Periódico Digital</a></li>
-                  <li id="videoJuego"><a href="#">Video Juego</a></li>
+                  <li id="periodicoDigital"><a href="periodico.php">Periódico Digital</a></li>
+                  <li id="videoJuego"><a href="videojuego.php">Video Juego</a></li>
                   <li id="Organizaciones"><a href="organizaciones.php">Organizaciones</a></li>
-                  <li id="Apóyanos"><a href="#">Apóyanos</a></li>
+                  <li id="Apoyanos"><a href="apoyanos.php">Apóyanos</a></li>
                 </ul>
             </div>
           </div>

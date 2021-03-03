@@ -19,9 +19,9 @@
                             <?=($r['sec_iframe'] != '')?
                                 $r['sec_iframe']:
                                 '<div class="col-md-12" align="center">
-                                    <img class="imgDes" src="images/img-project/'.$r['sec_img'].'" style="width:50%">
+                                    <img class="imgDes" src="images/img-project/'.$r['sec_img'].'" style="max-width:450px;">
                                 </div>';?>
-                            <p style="margin-top:10px;"><?=$r['sec_desc'];?></p>
+                            <p style="margin-top:10px;color:white;"><?=$r['sec_desc'];?></p>
                         </article>
                     </li>
             <?php }
