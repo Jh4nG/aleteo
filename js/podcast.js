@@ -12,14 +12,19 @@ var _PodcastWeb = (function (){
         var type = 'post';
         $.when(ajaxJson(ruta,data,type)).done((data)=>{
             $.each(data, function(key, val){
+                descripcion = val.descripcion.split('\n');
+                desc = "";
+                $.each(descripcion,(i,e)=>{
+                    desc += '<p class="card-text">'+e+'</p>';
+                });
                 if (val.categoria == 1){
                     var card1 = '<div class="row">'+
                                     '<div class="col-md-12">'+
                                         '<div class="card">'+
-                                            '<h5 class="card-header">Capítulos</h5>'+
+                                            '<h5 class="card-header"><b>Capítulos</b></h5>'+
                                             '<div class="card-body">'+
-                                                '<h5 class="card-title">'+val.nombre+'</h5>'+
-                                                '<p class="card-text">'+val.descripcion+'</p>'+
+                                                '<h5 class="card-title"><b>'+val.nombre+'</b></h5>'+
+                                                desc+
                                                 '<audio src="audios/'+val.link+'" controls loop style="width:100%">'+
                                                 '<p>Tu navegador no implementa el elemento audio</p>'+
                                                 '</audio>'+
@@ -34,10 +39,10 @@ var _PodcastWeb = (function (){
                     var card2 = '<div class="row">'+
                                     '<div class="col-md-12">'+
                                         '<div class="card">'+
-                                            '<h5 class="card-header">Micro-Podcast</h5>'+
+                                            '<h5 class="card-header"><b>Micro-Podcast</b></h5>'+
                                             '<div class="card-body">'+
-                                                '<h5 class="card-title">'+val.nombre+'</h5>'+
-                                                '<p class="card-text">'+val.descripcion+'</p>'+
+                                                '<h5 class="card-title"><b>'+val.nombre+'</b></h5>'+
+                                                desc+
                                                 '<audio src="audios/'+val.link+'" controls loop style="width:100%">'+
                                                 '<p>Tu navegador no implementa el elemento audio</p>'+
                                                 '</audio>'+
@@ -53,10 +58,10 @@ var _PodcastWeb = (function (){
                     var card3 = '<div class="row">'+
                                     '<div class="col-md-12">'+
                                         '<div class="card">'+
-                                            '<h5 class="card-header">Entrevistas</h5>'+
+                                            '<h5 class="card-header"><b>Entrevistas</b></h5>'+
                                             '<div class="card-body">'+
-                                                '<h5 class="card-title">'+val.nombre+'</h5>'+
-                                                '<p class="card-text">'+val.descripcion+'</p>'+
+                                                '<h5 class="card-title"><b>'+val.nombre+'</b></h5>'+
+                                                desc+
                                                 '<audio src="audios/'+val.link+'" controls loop style="width:100%">'+
                                                 '<p>Tu navegador no implementa el elemento audio</p>'+
                                                 '</audio>'+
