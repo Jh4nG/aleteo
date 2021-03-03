@@ -97,6 +97,18 @@ class Index extends Conexion{
             echo json_encode(false);
         }
     }
+
+    public function addSuscripccion(){
+        $nombre = $_POST['nmbSuscriptor'];
+        $email = $_POST['emailSuscriptor'];
+        $sql = "INSERT INTO suscripciones(nombres,email) VALUES(?,?)";
+        $rdb = $this->con_aleteo->prepare($sql);
+        if($rdb->execute([$nombre,$email])){
+            echo json_encode(true);
+        }else{
+            echo json_encode(false);
+        }
+    }
 }
 
 if(isset($_POST) && count($_POST)>0){

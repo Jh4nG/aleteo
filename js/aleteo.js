@@ -1,9 +1,59 @@
+var _error, _success, _warning;
+
+_error = {
+	icon: "error",
+	buttons: {
+		confirm: {
+			text: "Salir",
+			icon: "<i style='color:#DF584C' class='fas fa-exclamation-circle'></i>",
+			visible: true,
+			className: 'btn btn-danger'
+		}
+	}
+};
+
+_success = {
+	icon: "success",
+	buttons: {
+		confirm: {
+			text: "Continuar",
+			icon: "<i style='color:#29A76A' class='fas fa-check-circle'></i>",
+			visible: true,
+			className: 'btn btn-success'
+		}
+	}
+};
+
+_warning = {
+	icon: "warning",
+	buttons: {
+		confirm: {
+			text: "Continuar",
+			icon: "<i style='color:#6677BC' class='fas fa-exclamation-circle'></i>",
+			visible: true,
+			className: 'btn btn-warning'
+		}
+	}
+};
+
 function ajaxJson(ruta,data,type = 'post'){
     return $.ajax({
         url: ruta,
         type: type,
         dataType: 'json',
         data: data,
+    });
+}
+
+function ajaxJsonForm(ruta,data,type = 'post'){
+    return $.ajax({
+        url: ruta,
+        type: type,
+        dataType: 'json',
+        data: data,
+		contentType: false,
+		cache: false,
+		processData: false,
     });
 }
 
@@ -88,11 +138,29 @@ var _Aleteo = (function (){
         });
     }
 
+    var addSuscricpcion = ()=>{
+        var data = new FormData($('#newsletter')[0]);
+        var ruta = 'Controller/Aleteo.controller.php';
+        var type = 'post';
+        $.when(ajaxJsonForm(ruta,data,type)).done((resp)=>{
+            if(resp){
+                swal('Éxito!','Gracias por suscribirse al contenido de Aleteo Transmedia',_success);
+            }else{
+                swal('Advertencia!','Usuario ya suscrito.',_warning);
+            }
+        });
+    }
+
     return {
         iniciar:iniciar,
-        verificarConstr:verificarConstr
+        verificarConstr:verificarConstr,
+        addSuscricpcion:addSuscricpcion
     }
 })(jQuery);
 $(document).ready(function(){
    _Aleteo.iniciar();
+   $("#newsletter").submit(function(event){
+        event.preventDefault();
+        _Aleteo.addSuscricpcion();
+    });
 });
