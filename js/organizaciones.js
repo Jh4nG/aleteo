@@ -1,6 +1,7 @@
 var _OrgWeb = (function (){
     /** Inicia el proceso para el cargue del contenido */
     var iniciar = () =>{
+        _Aleteo.verificarConstr(4);
         $('#Organizaciones').addClass('active'); // activa el botón del navegador
     }
 
@@ -39,7 +40,7 @@ var _OrgWeb = (function (){
     }
 })(jQuery);
 $(document).ready(function(){
-    ingresoPagina('Podcast');
+    ingresoPagina('Organizaciones');
     _OrgWeb.iniciar();
     _OrgWeb.traerOrganizaciones();
 });

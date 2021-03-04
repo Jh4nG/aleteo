@@ -1,6 +1,7 @@
 var _PodcastWeb = (function (){
     /** Inicia el proceso para el cargue del contenido */
     var iniciar = () =>{
+        _Aleteo.verificarConstr(2);
         $('#Podcast').addClass('active'); // activa el botón del navegador
     }
 
