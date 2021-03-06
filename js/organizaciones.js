@@ -18,6 +18,7 @@ var _OrgWeb = (function (){
                                         '<div class="card-body">'+
                                             '<h5 class="card-title">'+val.titulo+'</h5>'+
                                             '<p class="card-text">'+val.descripcion+'</p>'+
+                                            '<a href="'+val.url+'" class="btn btn-info" target="blank">Enlace</a>'
                                         '</div>'+
                                     '</div>'+
                                 '</div>';
