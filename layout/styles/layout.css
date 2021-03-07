@@ -643,6 +643,12 @@ table a, #comments a{background-color:inherit;}
 			padding: 80px 0;
 		}
 
+		.contentDivPeriodico{
+			max-width: 90% !important;
+			margin-right: auto;
+			margin-left: auto;
+			padding: 80px 0;
+		}
 		.card{
 			/* width: 18rem; */
 			margin-bottom:10px;
@@ -656,4 +662,23 @@ table a, #comments a{background-color:inherit;}
 			display: block;
 			padding: 1.5rem 1rem;
 		}
+	}
+
+	.divImg{
+		display: block;
+		position: relative;		
+		max-width: 350px;
+		border-radius:15px;
+	}
+
+	.centrado{
+		color:white;
+		background-color: rgba(0,0,0,.8);
+		display: block;
+		position: absolute;
+		bottom: -16px;
+		transform: translate(0%, -10%);
+		left: 0;
+		padding: 20px;
+		width: 350px;
 	}
