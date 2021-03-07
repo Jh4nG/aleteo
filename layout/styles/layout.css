@@ -667,7 +667,7 @@ table a, #comments a{background-color:inherit;}
 	.divImg{
 		display: block;
 		position: relative;		
-		max-width: 350px;
+		max-width: 600px;
 		border-radius:15px;
 	}
 
@@ -680,5 +680,36 @@ table a, #comments a{background-color:inherit;}
 		transform: translate(0%, -10%);
 		left: 0;
 		padding: 20px;
-		width: 350px;
+		width: 600px;
+	}
+
+	.centrado>a{
+		color:white;
+	}
+
+	.divCentrado {
+		margin-bottom: 15px;
+	}
+
+	.divImg2{
+		display: block;
+		position: relative;		
+		max-width: 370px;
+		border-radius:15px;
+	}
+
+	.centrado2{
+		color:white;
+		background-color: rgba(0,0,0,.8);
+		display: block;
+		position: absolute;
+		bottom: -16px;
+		transform: translate(3%, -10%);
+		left: 0;
+		padding: 20px;
+		width: 385px;
+	}
+
+	.centrado2>a{
+		color:white;
 	}
