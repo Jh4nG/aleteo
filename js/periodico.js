@@ -69,12 +69,55 @@ var _Periodico = (function (){
         });
     }
 
+    var listarOpiniones = () => {
+        $("#divOpiniones").html('');
+        var ruta = 'Controller/Periodico.controller.php';
+        var data = {"metodo":"listarOpiniones"};
+        var type = 'post';
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            $.each(data, function(key, val){
+                var article = '<article>'+
+                                    '<b>Anónimo</b>'+
+                                    '<footer>'+val.texto_opinion+'</footer>'+
+                                    '<b>'+val.fecha_opinion_text+'</b>'+
+                                '</article><br>';
+                $("#divOpiniones").append(article);            
+            });
+        });
+    }
+
+    var ingresarComent = () =>{
+        var coment = $("#comentarioPeriodico").val();
+        if(coment == ''){
+            swal("Advertencia!", "El comentario no debe ir vacío!",_warning);
+        }
+        
+        var ruta = 'Controller/Periodico.controller.php';
+        var data = {"metodo":"uploadComment","parametros":{'coment':coment}};
+        var type = 'post';
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            if(data == "groseria"){
+                swal("Advertencia!", "No se permite lenguaje ofensivo!",_warning);
+            }else if (data == 'insert'){
+                swal("Exito", "Comentario agregado!",_success);
+                $("#comentarioPeriodico").val('');
+                listarOpiniones();
+            }else{
+                swal("Error", "Ha habido un problema!",_error);
+            }
+        });
+
+    }
+
     return {
         iniciar:iniciar,
-        viewPer:viewPer
+        viewPer:viewPer,
+        ingresarComent:ingresarComent,
+        listarOpiniones:listarOpiniones
     }
 })(jQuery);
 $(document).ready(function(){
     ingresoPagina('Periodico Digital');
     _Periodico.iniciar();
+    _Periodico.listarOpiniones();
 });

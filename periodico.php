@@ -23,23 +23,14 @@
             </div>
           </div>
           <div class="col-md-3 col-sm-12">
-            <div class="col-md-12" style="background-color:white;border-radius: 15px;">
+            <br>
+            <div class="col-md-12" style="background-color:white;border-radius: 15px; overflow: scroll; max-height: 470px;">
               <br>
-              <article>
-                <b>Anónimo</b>
-                <footer>Comentarios ... . .. . .</footer>
-              </article>
+              <textarea class="form-control" placeholder="Realizar Comentario " id="comentarioPeriodico"></textarea>
               <br>
-              <article>
-                <b>Anónimo</b>
-                <footer>Comentarios ... . .. . .</footer>
-              </article>
-              <br>
-
-              <textarea class="form-control" placeholder="Realizar Comentario "></textarea>
-              <button class="btn btn-primary">Comentar</button>
-              <br>
-              <br>
+              <button class="btn btn-primary pull-right" id="btnComentarioPeriodico" onclick="_Periodico.ingresarComent()">Comentar</button>
+              <br><br>
+              <div id="divOpiniones"></div>
             </div>
             <br>
           </div>
