@@ -8,8 +8,8 @@
       <div class="contentDivPeriodico" >
 
         <div class="col-md-12 row">
-          <div class="col-md-9">
-            <div class="col-md-12" style="background-color:white;border-radius: 15px;">
+          <div class="col-md-9 col-sm-12">
+            <div class="col-md-12" style="border-radius: 15px;">
               <br>
               <div class="row ">
                   <div class="col-md-8">
@@ -22,7 +22,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-12">
             <div class="col-md-12" style="background-color:white;border-radius: 15px;">
               <br>
               <article>
@@ -58,14 +58,10 @@
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h4 id="modal-title-lg" class="modal-title">Grande</h4>
+            <h4 id="modal-title-lg" class="modal-title"></h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
-          <div id="modal-body-lg" class="modal-body">
-            
-          </div>
-          <div class="modal-footer" id="btn-lg">
-
+          <div id="modal-body-lg-periodico" class="modal-body" style="background-image:url('images/img-project/Fondo 2.png');text-align: justify;">
           </div>
         </div>
         

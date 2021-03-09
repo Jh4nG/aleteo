@@ -19,27 +19,28 @@ var _Periodico = (function (){
                                         '<a href="#" onclick="_Periodico.viewPer('+e.id_periodico+')">'+
                                             '<h4>'+e.per_titulo+'</h4>'+
                                         '</a>'+
-                                    '<div style="float:right;">'+
-                                        '<time >6 Nov 2029</time>'+
+                                        e.per_contratitulo+
+                                    '<div style="float:right;margin: 13px 0px 0px 0px;">'+
+                                        '<time >'+e.fecha_publico+'</time>'+
                                     '</div>'+
                                 '</div>';
                         $('#principalNoticia').append(text);
-                        textContent = ' <h5>'+e.per_contratitulo+'</h5><br>'+
-                                            e.per_texto.substr(0,300)+' ...',
-                                        '<br>';
-                        $('#principalContent').append(textContent);
+                        // textContent = ' <h5>'+e.per_contratitulo+'</h5><br>'+
+                        //                     e.per_texto.substr(0,300)+' ...',
+                        //                 '<br>';
+                        // $('#principalContent').append(textContent);
                         
                     }else{
-                        text = '<div class="col-md-4">'+
+                        text = '<div class="col-md-4 col-sm-12">'+
                                     '<div class="col-md-12 divCentrado">'+
                                         '<img src="images/img-project/'+e.per_link_img+'" class="divImg2">'+
                                         '<div class="centrado2">'+
                                             '<a href="#" onclick="_Periodico.viewPer('+e.id_periodico+')">'+
                                                 '<h4>'+e.per_titulo+'</h4>'+
-                                                '<div style="float:right;">'+
-                                                    '<time >6 Nov 2029</time>'+
-                                                '</div>'+
                                             '</a>'+
+                                            '<div style="float:right;margin: 13px 0px 0px 0px;">'+
+                                                '<time >'+e.fecha_publico+'</time>'+
+                                            '</div>'+
                                         '</div>'+
                                     '</div>'+
                                 '</div>';
@@ -51,7 +52,21 @@ var _Periodico = (function (){
     }
 
     var viewPer = (id)=>{
-        $('#modal-view-periodico').modal('show');
+        var ruta = 'Controller/Periodico.controller.php';
+        var data = {"metodo":"getPeriodico","parametros":{'id':id}};
+        var type = 'post';
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            $('#modal-title-lg').html('<h1><b>'+data[0].per_titulo+'</b></h1>');
+            $('#modal-body-lg-periodico').html('');
+            $('#modal-body-lg-periodico').append('<div class="divImgPeriodico">'+
+                                                    '<img src="images/img-project/'+data[0].per_link_img+'" >'+
+                                                    '<div class="centradoDivPer">'+
+                                                        '<p>'+data[0].	per_link_pie_img+'</p>'+
+                                                    '</div>'+
+                                                 '</div>');
+            $('#modal-body-lg-periodico').append(data[0].per_texto);            
+            $('#modal-view-periodico').modal('show');
+        });
     }
 
     return {
