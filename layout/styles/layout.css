@@ -651,7 +651,7 @@ table a, #comments a{background-color:inherit;}
 		.card{
 			/* width: 18rem; */
 			margin-bottom:10px;
-			height: 238px;
+			height: 100%;
 			width: 83%;
 		}
 	}
