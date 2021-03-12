@@ -3,10 +3,12 @@
 -- PODCAST 28 Febrero.                  -> Fabian
 -- Periódico Digita 28 Febrero.         -> Jhon
 -- Organizaciones 10 Febrero.           -> Fabian
--- Nuestro Futuro Presente 10 Marzo.    -> 
+-- Estadísticos 30 Marzo.               -> (Por tarde)
+-- Nuestro Futuro Presente 30 Marzo.    -> 
 -- Apoyanos 15 Marzo.                   -> 
--- Serie Web 31 Marzo.                  -> 
+-- Serie Web 15 Abril.                  -> 
 -- Video Juego 15 Abril.                -> 
+-- Marketing 30 Abril.                  -> 
 
 
 // Cambios inicio

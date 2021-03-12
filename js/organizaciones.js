@@ -12,7 +12,7 @@ var _OrgWeb = (function (){
         var type = 'post';
         $.when(ajaxJson(ruta,data,type)).done((data)=>{
             $.each(data, function(key, val){
-                var card = '<div class="col-md-3">'+
+                var card = '<div class="col-md-4">'+
                                     '<div class="card" style="height: auto !important;max-width: 90%;">'+
                                         '<img class="card-img-top" style="max-width: 97% !important;margin: 5px;" alt="Card image cap" src="'+val.imagen+'" >'+
                                         '<div class="card-body">'+

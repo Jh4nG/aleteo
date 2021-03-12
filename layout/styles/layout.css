@@ -663,6 +663,14 @@ table a, #comments a{background-color:inherit;}
 		}
 	}
 
+	.div-sec-periodico{
+		background-image: url('images/img-project/Fondo 1.png');
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fix;
+	}
+
 	@media(min-width: 1200px){
 
 		.divImg{
@@ -734,6 +742,14 @@ table a, #comments a{background-color:inherit;}
 			bottom: -16px;
 			left: 0;
 			padding: 3px 10px 0px 10px;
+		}
+
+		.marginPeriodicoTop {
+			margin-top: 100px;
+		}
+
+		.divImgPeriodicoTop{
+			height: 200px;
 		}
 	}
 
@@ -809,7 +825,17 @@ table a, #comments a{background-color:inherit;}
 			left: 0;
 			padding: 3px 10px 0px 10px;
 		}
+
+		.marginPeriodicoTop {
+			margin-top: 100px;
+		}
+
+		.divImgPeriodicoTop{
+			height: 200px;
+		}
+
 	}
+	
 
 	@media(max-width: 767px){
 
@@ -889,5 +915,13 @@ table a, #comments a{background-color:inherit;}
 			/* float: right;
 			margin: 1em 3em 1em 1em;
 			width: 400px; */
+		}
+
+		.marginPeriodicoTop {
+			margin-top: 110px;
+		}
+
+		.divImgPeriodicoTop{
+			
 		}
 	}

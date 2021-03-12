@@ -4,7 +4,10 @@
     <!-- Incluyendo navegador -->
     <?php include "plantilla/navbar.php"; ?>
    
-    <div style="margin-top:100px;"></div>
+    <div class="marginPeriodicoTop"></div>
+    <div class="col-md-12 div-sec-periodico" align="center">
+      <img src="images/img-project/LogoPeriodicoPrincipal.jpg" class="divImgPeriodicoTop" alt="">
+    </div>
       <div class="contentDivPeriodico" >
 
         <div class="col-md-12 row">
