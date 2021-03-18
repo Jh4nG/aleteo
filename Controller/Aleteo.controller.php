@@ -60,14 +60,14 @@ class Index extends Conexion{
         if($rdb->execute()){
             $obj = $rdb -> fetchAll(PDO::FETCH_OBJ);
             if(count($obj)>0){
-                if($this->ingresarVisita($server,$parametros['pagina'])){
+                if($this->ingresarVisita($server,$parametros)){
                     echo json_encode(true);
                 }
             }else{
                 $sql = "INSERT INTO visitador(id_visitador) VALUES(?)";
                 $rdb = $this->con_aleteo->prepare($sql);
                 if($rdb->execute([$server])){
-                    if($this->ingresarVisita($server,$parametros['pagina'])){
+                    if($this->ingresarVisita($server,$parametros)){
                         echo json_encode(true);
                     }
                 }else{
@@ -80,10 +80,10 @@ class Index extends Conexion{
     /**
      * Inserción de visitas
      */
-    public function ingresarVisita($server,$pagina){
-        $sql = "INSERT INTO visitas(id_visitador,pagina) VALUES(?,?)";
+    public function ingresarVisita($server,$parametros){
+        $sql = "INSERT INTO visitas(id_visitador,pagina,dispositivo) VALUES(?,?,?)";
         $rdb = $this->con_aleteo->prepare($sql);
-        if($rdb->execute([$server,$pagina])){
+        if($rdb->execute([$server,$parametros['pagina'],$parametros['dispositivo']])){
             return true;
         }
     }

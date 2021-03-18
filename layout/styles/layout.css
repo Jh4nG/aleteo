@@ -924,4 +924,13 @@ table a, #comments a{background-color:inherit;}
 		.divImgPeriodicoTop{
 			
 		}
+		
+		#divOrg>div{
+			margin-bottom: 20px;
+		}
+
+		.contentDivOrg{
+			margin-top: 115px;
+    		margin-left: 20px;
+		}
 	}
