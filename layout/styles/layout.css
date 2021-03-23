@@ -382,6 +382,10 @@ table a, #comments a{background-color:inherit;}
 
 	.mainav li{display:inline-block; position:relative; margin:0 0px 0 0; padding:0;}
 	.fl_left, .fl_right{display:block; float:none;}
+
+	.marginApoyanosTop {
+		margin-top: 120px;
+	}
 }
 
 
