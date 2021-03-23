@@ -3,7 +3,44 @@
   <body id="top" class="bgded imgFirts">
     <!-- Incluyendo navegador -->
     <?php include "plantilla/navbar.php"; ?>
-   
+    <div style="margin-top:100px;"></div>
+    
+  <div class="col-md-12" align="center">
+    <h1 id="tittleApoyanos" style="color:white"></h1>
+  </div>
+  
+  
+  <div class="col-md-12" style="text-align:justify;">
+    <div class="divImgApoyanos">
+      <img id="imgApoyanos"> 
+    </div>
+    <h3 id="descApoyanos" style="color:white"></h3>
+  </div>
+  
+  <div class="col-md-12" align="center">
+    <h3 style="color:white">VAKI</h3>
+  </div>
+
+  <div class="col-md-12" align="center">
+    <iframe id="videoApoyanos" width="650" height="400" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="col-md-3 col-sm-12">
+    <br>
+    <div class="col-md-12" style="background-color:white;border-radius: 15px; overflow: scroll; max-height: 470px;">
+      <br>
+      <textarea class="form-control" placeholder="Realizar Comentario " id="comentarioApoyanos"></textarea>
+      <br>
+      <button class="btn btn-primary pull-right" id="btnComentarioApoyanos" onclick="_Apoyanos.ingresarComent()">Comentar</button>
+      <br><br>
+      <div id="divOpinionesApoyanos"></div>
+    </div>
+    <br>
+  </div>
+  
+    <div style="margin-top:100px;"></div>
+    <div style="margin-top:100px;"></div>
+    <div style="margin-top:100px;"></div>
     <?php require_once 'plantilla/footer.php'; ?>
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>

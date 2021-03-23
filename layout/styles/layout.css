@@ -734,6 +734,13 @@ table a, #comments a{background-color:inherit;}
 			border-radius: 10px;
 		}
 
+		.divImgApoyanos{
+			float: right;
+			margin: 60px 15px 0em 32px;
+			width: 600px;
+			border-radius: 10px;
+		}
+
 
 		.centradoDivPer{
 			color:white;
@@ -810,6 +817,13 @@ table a, #comments a{background-color:inherit;}
 		}
 
 		.divImgPeriodico{
+			float: right;
+			margin: 60px 15px 0em 32px;
+			width: 600px;
+			border-radius: 10px;
+		}
+
+		.divImgApoyanos{
 			float: right;
 			margin: 60px 15px 0em 32px;
 			width: 600px;
