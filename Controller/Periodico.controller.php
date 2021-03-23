@@ -36,6 +36,7 @@ class Index extends Conexion{
     public function listarOpiniones()
     {
         $sql ="SELECT * FROM opiniones
+                WHERE modulo = 'periodico'
                 ORDER BY fecha_opinion DESC";
         $rdb = $this->con_aleteo->prepare($sql);
         if($rdb->execute()){
@@ -59,10 +60,11 @@ class Index extends Conexion{
         $mes = date("m");
         $anio = date("Y");
         $fecha = $dia.' '.$this->meses[(int) $mes].' '.$anio;
+        $modulo = 'periodico';
 
-        $sql = "INSERT INTO opiniones(texto_opinion, fecha_opinion_text) VALUES(?,?)";
+        $sql = "INSERT INTO opiniones(texto_opinion, fecha_opinion_text, modulo) VALUES(?,?,?)";
         $rdb = $this->con_aleteo->prepare($sql);
-        if($rdb->execute([$coment['coment'], $fecha])){
+        if($rdb->execute([$coment['coment'], $fecha, $modulo])){
             echo json_encode('insert');
         }else{
             echo json_encode(false);
