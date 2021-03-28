@@ -731,6 +731,10 @@ table a, #comments a{background-color:inherit;}
 			text-transform: none !important;
 		}
 
+		#descApoyanos>h4{
+			text-transform: none !important;
+		}
+
 		.divImgPeriodico{
 			float: right;
 			margin: 60px 15px 0em 32px;

@@ -13,8 +13,7 @@ var _Apoyanos = (function (){
             $("#tittleApoyanos").html(data[0].titulo);
             document.getElementById("imgApoyanos").src = "images/img-project/"+data[0].imagen;
             $("#descApoyanos").html(data[0].descripcion);
-            document.getElementById("videoApoyanos").src = data[0].video;
-
+            $('#videoApoyanos').html(data[0].video);
         });
     }
 

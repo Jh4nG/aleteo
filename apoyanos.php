@@ -5,14 +5,14 @@
     <?php include "plantilla/navbar.php"; ?>
     <div style="margin-top:100px;"></div>
     
-  <div class="col-md-12 marginApoyanosTop" align="center">
-    <h1 id="tittleApoyanos" style="color:white"></h1>
+  <div class="col-md-12 marginApoyanosTop">
+    <h1 id="tittleApoyanos" style="color:white;"></h1>
   </div>
   
   
   <div class="col-md-12 row" style="text-align:justify;">
     <div class="col-md-8">
-      <h3 id="descApoyanos" style="color:white;text-transform: none !important;"></h3>
+      <div id="descApoyanos" style="color:white;text-transform: none !important;"></div>
     </div>
     <div class="col-md-4">
       <div class="">
@@ -21,9 +21,9 @@
     </div>
     <div class="col-md-12">
       <div class="col-md-12" align="center">
-        <h3 style="color:white">VAKI</h3>
-        <div class="col-md-12" align="center">
-          <iframe id="videoApoyanos" width="650" height="400" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3 style="color:white;background: rgba(0,0,0,0.7);">VAKI</h3>
+        <div class="col-md-12" align="center" id="videoApoyanos">
+          <!-- <iframe id="videoApoyanos" width="650" height="400" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
@@ -51,6 +51,6 @@
     <?php require_once 'plantilla/footer.php'; ?>
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>
-    <script type="text/javascript" src="js/apoyanos.js"></script>
+    <script type="text/javascript" src="js/apoyanos.js?v=<?php echo TIME?>"></script>
   </body>
 </html>
