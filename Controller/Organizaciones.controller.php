@@ -8,7 +8,8 @@ class Organizaciones extends Conexion{
 
     public function listarOrg()
     {
-        $sql = "SELECT * FROM organizaciones WHERE activo = 1 ORDER BY fecha_creacion DESC";
+        $sql = "SELECT id,titulo,descripcion,imagen_link,fecha_creacion,activo,tipo,url
+        FROM organizaciones WHERE activo = 1 ORDER BY fecha_creacion DESC";
         $rdb = $this->con_aleteo->prepare($sql);
         if($rdb->execute()){
             $obj = $rdb -> fetchAll(PDO::FETCH_OBJ);

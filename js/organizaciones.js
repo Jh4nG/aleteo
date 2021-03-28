@@ -14,7 +14,7 @@ var _OrgWeb = (function (){
             $.each(data, function(key, val){
                 var card = '<div class="col-md-4">'+
                                     '<div class="card" style="height: auto !important;max-width: 90%;">'+
-                                        '<img class="card-img-top" style="max-width: 97% !important;margin: 5px;" alt="Card image cap" src="'+val.imagen+'" >'+
+                                        '<img class="card-img-top" style="max-width: 97% !important;margin: 5px;" alt="Card image cap" src="images/img-project/'+val.imagen_link+'" >'+
                                         '<div class="card-body">'+
                                             '<h5 class="card-title">'+val.titulo+'</h5>'+
                                             '<p class="card-text">'+val.descripcion+'</p>'+
