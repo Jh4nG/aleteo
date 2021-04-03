@@ -52,7 +52,7 @@
     <!-- ################################################################################################ -->
 
     <div class="wrapper row3">
-      <div class="hoc container clear"> 
+      <div class="hoc container clear divDatosPagina"> 
         <!-- ################################################################################################ -->
         <div class="group">
           <?php include 'secciones/home_datosPagina.php' ?>

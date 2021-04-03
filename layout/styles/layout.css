@@ -956,3 +956,7 @@ table a, #comments a{background-color:inherit;}
     		margin-left: 20px;
 		}
 	}
+
+	.divDatosPagina{
+		padding: 25px 0 !important;
+	}

@@ -109,6 +109,19 @@ class Index extends Conexion{
             echo json_encode(false);
         }
     }
+
+    public function datosContacto(){
+        $sql ="SELECT * FROM secciones 
+                WHERE id_categoria = 9
+                AND sec_estado = 1
+                ORDER BY sec_posicion ASC"; // -> Datos Contacto
+        $rdb = $this->con_aleteo->prepare($sql);
+        if($rdb->execute()){
+            echo json_encode($rdb -> fetchAll(PDO::FETCH_OBJ));
+        }else{
+            echo json_encode(false);
+        }
+    }
 }
 
 if(isset($_POST) && count($_POST)>0){

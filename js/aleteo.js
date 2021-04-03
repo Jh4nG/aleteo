@@ -87,6 +87,7 @@ var _Aleteo = (function (){
     var iniciar = ()=>{
         logoFooter();
         redesSociales();
+        datosContacto();
         // Inicializa el tooltip
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
@@ -131,6 +132,17 @@ var _Aleteo = (function (){
                 }
             });
             $('#contentSocial').html(text);
+        });
+    }
+
+    /** Trae la información de datos de Contacto */
+    var datosContacto = ()=>{
+        var ruta = 'Controller/Aleteo.controller.php';
+        var data = {"metodo":"datosContacto"};
+        var type = 'post';
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            $('#aWhatsTransmedia').html(data[0].sec_desc).attr('href',data[0].sec_link_redirect);
+            $('#aMailTransmedia').html(data[1].sec_desc).attr('href','mailto:'+data[1].sec_link_redirect);
         });
     }
 
