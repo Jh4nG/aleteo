@@ -37,6 +37,6 @@
   </div>
 </div> 
 <!-- Botón flotante -->
-<div class="share" data-toggle="tooltip" data-placement="left" title="#AleteoHaciaElFuturo">
+<div id="haciaFuturo" class="share" data-toggle="tooltip" data-placement="left" title="#AleteoHaciaElFuturo">
     #AF
 </div>

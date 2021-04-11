@@ -960,3 +960,12 @@ table a, #comments a{background-color:inherit;}
 	.divDatosPagina{
 		padding: 25px 0 !important;
 	}
+
+	.divFuturoCss{
+		max-height: 600px;
+    	overflow-y: auto;
+	}
+
+	.divFuturo > h4,h3,h2,h1,h5,h6{
+		text-transform: none;
+	}

@@ -178,9 +178,12 @@ var _Aleteo = (function (){
     }
 })(jQuery);
 $(document).ready(function(){
-   _Aleteo.iniciar();
-   $("#newsletter").submit(function(event){
+    _Aleteo.iniciar();
+    $("#newsletter").submit(function(event){
         event.preventDefault();
         _Aleteo.addSuscricpcion();
+    });
+    $('#haciaFuturo').on('click',()=>{
+        window.location.href = "haciaelfuturo.php";
     });
 });
