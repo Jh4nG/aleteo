@@ -4,9 +4,9 @@
     <!-- Incluyendo navegador -->
     <?php include "plantilla/navbar.php"; ?>
       <div style="margin-top:100px;"></div>
-      <div class="contentDivPodcast" >
+      <div class="contentDivPodcast row" >
       
-        <div class="col-md-12 row">
+        <div class="col-md-9 row">
           <div class="nav flex-column nav-pills col-md-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link" id="v-pills-capitulos-tab" data-toggle="pill" href="#v-pills-capitulos" role="tab" aria-controls="v-pills-capitulos" aria-selected="true">Capítulos</a>
             <a class="nav-link active" id="v-pills-micro_podcast-tab" data-toggle="pill" href="#v-pills-micro_podcast" role="tab" aria-controls="v-pills-micro_podcast" aria-selected="false">Micro-Podcast</a>
@@ -19,6 +19,20 @@
             <div class="tab-pane fade" id="v-pills-entrevistas" role="tabpanel" aria-labelledby="v-pills-entrevistas-tab"></div>
           </div>
         </div>
+
+        <div class="col-md-3 col-sm-12">
+            <br>
+            <div class="col-md-12" style="background-color:white;border-radius: 15px; overflow: scroll; max-height: 470px;">
+              <br>
+              <textarea class="form-control" placeholder="Realizar Comentario " id="comentarioPodcast"></textarea>
+              <br>
+              <button class="btn btn-primary pull-right" id="btnComentarioPodcast" onclick="_PodcastWeb.ingresarComent()">Comentar</button>
+              <br><br>
+              <div id="divOpiniones"></div>
+            </div>
+            <br>
+        </div>
+
       </div>
       <div style="margin-top:100px;"></div>
       <div style="margin-top:100px;"></div>

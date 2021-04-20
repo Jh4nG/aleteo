@@ -3,6 +3,7 @@ var _PodcastWeb = (function (){
     var iniciar = () =>{
         _Aleteo.verificarConstr(2);
         $('#Podcast').addClass('active'); // activa el botón del navegador
+        listarOpiniones();
     }
 
     var traerPodcast = () =>{
@@ -21,7 +22,7 @@ var _PodcastWeb = (function (){
                 if (val.categoria == 1){
                     var card1 = '<div class="row">'+
                                     '<div class="col-md-12">'+
-                                        '<div class="card">'+
+                                        '<div class="card" style="width:100%">'+
                                             '<h5 class="card-header"><b>Capítulos</b></h5>'+
                                             '<div class="card-body">'+
                                                 '<h5 class="card-title"><b>'+val.nombre+'</b></h5>'+
@@ -39,7 +40,7 @@ var _PodcastWeb = (function (){
                 }else if (val.categoria == 2){
                     var card2 = '<div class="row">'+
                                     '<div class="col-md-12">'+
-                                        '<div class="card">'+
+                                        '<div class="card" style="width:100%">'+
                                             '<h5 class="card-header"><b>Micro-Podcast</b></h5>'+
                                             '<div class="card-body">'+
                                                 '<h5 class="card-title"><b>'+val.nombre+'</b></h5>'+
@@ -58,7 +59,7 @@ var _PodcastWeb = (function (){
                 else if (val.categoria == 3){
                     var card3 = '<div class="row">'+
                                     '<div class="col-md-12">'+
-                                        '<div class="card">'+
+                                        '<div class="card" style="width:100%">'+
                                             '<h5 class="card-header"><b>Entrevistas</b></h5>'+
                                             '<div class="card-body">'+
                                                 '<h5 class="card-title"><b>'+val.nombre+'</b></h5>'+
@@ -78,9 +79,50 @@ var _PodcastWeb = (function (){
         });
     }
 
+    var listarOpiniones = () => {
+        $("#divOpiniones").html('');
+        var ruta = 'Controller/Podcast.controller.php';
+        var data = {"metodo":"listarOpiniones"};
+        var type = 'post';
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            $.each(data, function(key, val){
+                var article = '<article>'+
+                                    '<b>Anónimo</b>'+
+                                    '<footer>'+val.texto_opinion+'</footer>'+
+                                    '<b>'+val.fecha_opinion_text+'</b>'+
+                                '</article><br>';
+                $("#divOpiniones").append(article);            
+            });
+        });
+    }
+
+    var ingresarComent = () =>{
+        var coment = $("#comentarioPodcast").val();
+        if(coment == ''){
+            swal("Advertencia!", "El comentario no debe ir vacío!",_warning);
+        }
+        
+        var ruta = 'Controller/Podcast.controller.php';
+        var data = {"metodo":"uploadComment","parametros":{'coment':coment}};
+        var type = 'post';
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            if(data == "groseria"){
+                swal("Advertencia!", "No se permite lenguaje ofensivo!",_warning);
+            }else if (data == 'insert'){
+                swal("Exito", "Comentario agregado!",_success);
+                $("#comentarioPodcast").val('');
+                listarOpiniones();
+            }else{
+                swal("Error", "Ha habido un problema!",_error);
+            }
+        });
+
+    }
+
     return {
         iniciar:iniciar,
-        traerPodcast:traerPodcast
+        traerPodcast:traerPodcast,
+        ingresarComent:ingresarComent
     }
 })(jQuery);
 $(document).ready(function(){

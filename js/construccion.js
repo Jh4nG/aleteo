@@ -9,7 +9,11 @@ var _Construccion = (function (){
         var data = {"metodo":"getConstruc","parametros":{'id':id}};
         var type = 'post';
         $.when(ajaxJson(ruta,data,type)).done((data)=>{
-            $('#imgConstruc').attr('src','images/img-project/'+data[0].img_constr).attr('style','max-width:45%;');
+            if(id == 'Ng=='){
+                $('#imgConstruc').attr('src','images/img-project/'+data[0].img_constr).attr('style','min-width: 36%');
+            }else{
+                $('#imgConstruc').attr('src','images/img-project/'+data[0].img_constr).attr('style','max-width:45%;');
+            }
             $('#'+data[0].identificador).addClass('active'); // activa el botón del navegador
         });
     }
