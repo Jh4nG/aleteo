@@ -25,11 +25,6 @@ var _Periodico = (function (){
                                     '</div>'+
                                 '</div>';
                         $('#principalNoticia').append(text);
-                        // textContent = ' <h5>'+e.per_contratitulo+'</h5><br>'+
-                        //                     e.per_texto.substr(0,300)+' ...',
-                        //                 '<br>';
-                        // $('#principalContent').append(textContent);
-                        
                     }else{
                         text = '<div class="col-md-4 col-sm-12">'+
                                     '<div class="col-md-12 divCentrado">'+
