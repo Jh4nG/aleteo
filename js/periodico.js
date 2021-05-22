@@ -16,7 +16,7 @@ var _Periodico = (function (){
                     if(i==0){
                         text = '<img src="images/img-project/'+e.per_link_img+'" class="divImg">'+
                                     '<div class="centrado">'+
-                                        '<a href="#" onclick="_Periodico.viewPer('+e.id_periodico+')">'+
+                                        '<a href="#!" onclick="_Periodico.viewPer('+e.id_periodico+')">'+
                                             '<h4>'+e.per_titulo+'</h4>'+
                                         '</a>'+
                                         e.per_contratitulo+
@@ -30,7 +30,7 @@ var _Periodico = (function (){
                                     '<div class="col-md-12 divCentrado">'+
                                         '<img src="images/img-project/'+e.per_link_img+'" class="divImg2">'+
                                         '<div class="centrado2">'+
-                                            '<a href="#" onclick="_Periodico.viewPer('+e.id_periodico+')">'+
+                                            '<a href="#!" onclick="_Periodico.viewPer('+e.id_periodico+')">'+
                                                 '<h4>'+e.per_titulo+'</h4>'+
                                             '</a>'+
                                             '<div style="float:right;margin: 13px 0px 0px 0px;">'+

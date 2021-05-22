@@ -10,6 +10,15 @@
         <ul class="slides">
             <?php while ($r=$rdb->fetch()){ 
                 $limit = $r['cant_reg'];
+                $img = ($r['sec_link_redirect'] != '')?
+                    '<div class="col-md-12" align="center">
+                        <a href="'.$r['sec_link_redirect'].'">
+                        <img class="imgDes" src="images/img-project/'.$r['sec_img'].'" style="max-width:450px;">
+                        </a>
+                    </div>':
+                    '<div class="col-md-12" align="center">
+                        <img class="imgDes" src="images/img-project/'.$r['sec_img'].'" style="max-width:450px;">
+                    </div>';
                 if($a<$limit){ ?>
                     <li>
                         <article>
@@ -17,10 +26,7 @@
                                 <legend><?=$r['sec_titulo'];?></legend>
                             </fieldset>
                             <?=($r['sec_iframe'] != '')?
-                                $r['sec_iframe']:
-                                '<div class="col-md-12" align="center">
-                                    <img class="imgDes" src="images/img-project/'.$r['sec_img'].'" style="max-width:450px;">
-                                </div>';?>
+                                $r['sec_iframe']:$img;?>
                             <p style="margin-top:10px;color:white;"><?=$r['sec_desc'];?></p>
                         </article>
                     </li>

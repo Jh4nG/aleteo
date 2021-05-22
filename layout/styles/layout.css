@@ -707,7 +707,7 @@ table a, #comments a{background-color:inherit;}
 		.divImg2{
 			display: block;
 			position: relative;		
-			max-width: 370px;
+			max-width: 100%;
 			border-radius:15px;
 		}
 
@@ -720,11 +720,15 @@ table a, #comments a{background-color:inherit;}
 			transform: translate(3%, -10%);
 			left: 0;
 			padding: 20px;
-			width: 385px;
+			width: 94%;
 		}
 
 		.centrado2>a{
 			color:white;
+		}
+		
+		.centrado2>a>h4{
+		    font-size: 1rem !important;
 		}
 
 		#modal-body-lg-periodico>h4{

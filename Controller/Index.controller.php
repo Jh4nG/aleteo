@@ -29,7 +29,7 @@ class Index extends Conexion{
      * Trae Información de los deslizadores del Index
      */
     public function cargarDeslizador($typeReturn = 1){
-        $sql ="SELECT sec_titulo,sec_iframe,sec_img,sec_desc,cant_reg 
+        $sql ="SELECT sec_titulo,sec_iframe,sec_img,sec_desc,cant_reg, sec_link_redirect
             FROM categoria c,secciones s 
             WHERE c.id = s.id_categoria
             AND c.id = 1

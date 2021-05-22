@@ -39,8 +39,12 @@ var _SerieWeb = (function (){
                 });
 
                 $.each(data.adicional, function(i, e){
+                    active = '';
+                    if(i == 0){
+                        active = 'active';
+                    }
                     $('#divContentContenidoAdicional').append(
-                        '<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 cssProduct active " id="section_div_'+e.id+'">'+
+                        '<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 cssProduct '+active+' " id="section_div_'+e.id+'">'+
                             '<div class="col-md-12" align="center">'+
                                 '<img src="images/img-project/'+e.serie_img+'" class="imgDivSlider" alt="slide 1">'+
                             '</div>'+
@@ -75,8 +79,8 @@ var _SerieWeb = (function (){
         $('#carouselExample').on('slide.bs.carousel', function (e) {
             var $e = $(e.relatedTarget);
             var idx = $e.index();
-            var itemsPerSlide = 7;
             var totalItems = $('.carousel-item').length;            
+            var itemsPerSlide = totalItems-1;
             if (idx >= totalItems-(itemsPerSlide-1)) {
                 var it = itemsPerSlide - (totalItems - idx);
                 for (var i=0; i<it; i++) {

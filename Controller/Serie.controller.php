@@ -11,7 +11,7 @@ class Serie extends Conexion{
     public function listarContenido(){
         $objSerieWeb = $this->getSerie();
         $objContenidoAd = $this->getContenidoAd();
-
+        
         echo json_encode(array(
             'serie' => $objSerieWeb,
             'adicional' => $objContenidoAd
@@ -31,13 +31,16 @@ class Serie extends Conexion{
         }
     }
 
-    public function getContenidoAd(){
+    public function getContenidoAd($type = 1){
         // Clasificacion 1 para contenidos adicionales
         $sql ="SELECT * FROM serieweb
                 WHERE serie_clasificacion = 1
                 ORDER BY serie_fecha_creacion ASC";
         $rdb = $this->con_aleteo->prepare($sql);
         if($rdb->execute()){
+            if($type == 2){
+                return $rdb;
+            }
             return $rdb -> fetchAll(PDO::FETCH_OBJ);
         }else{
             return false;
