@@ -1236,3 +1236,14 @@ table a, #comments a{background-color:inherit;}
 			padding: 30px 30px 30px 80px;
 		}
 	}
+
+
+	@font-face {
+		font-family: 'Nasalization';
+		src: url('../font/nasalization-rg.otf');
+	}
+	
+	*{
+		font-family: 'Nasalization' !important;
+		font-size: 15px;
+	}

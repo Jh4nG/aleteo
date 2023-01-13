@@ -26,6 +26,7 @@
                   <li id="periodicoDigital"><a href="periodico.php">Periódico Digital</a></li>
                   <li id="videoJuego"><a href="videojuego.php">Video Juego</a></li>
                   <li id="Organizaciones"><a href="organizaciones.php">Organizaciones</a></li>
+                  <li id="Participantes"><a href="participantes.php">Equipo Aleteo</a></li>
                   <li id="Apoyanos"><a href="apoyanos.php">Apóyanos</a></li>
                 </ul>
             </div>

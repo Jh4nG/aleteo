@@ -3,6 +3,7 @@ var _VideoJuego = (function (){
     var iniciar = () =>{
         _Aleteo.verificarConstr(6);
         $('#videoJuego').addClass('active'); // activa el botón del navegador
+        $('#modal-view-VideoJuego').modal('show');
     }
 
     return {
