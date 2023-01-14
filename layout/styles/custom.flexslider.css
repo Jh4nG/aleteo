@@ -39,8 +39,8 @@ File: Custom Flexslider CSS => For FlexSlider v2.6.1
 .flex-direction-nav a{display:block; position:absolute; top:50%; width:40px; height:40px; margin:-20px 0 0 0; z-index:10; overflow:hidden; cursor:pointer; text-decoration:none;}
 .flex-direction-nav a::before{display:inline-block; font-size:40px; line-height:1; content:"\f053"; z-index:999;}
 .flex-direction-nav a.flex-next::before{content:"\f054";}
-.flex-direction-nav .flex-prev{left:0;}
-.flex-direction-nav .flex-next{right:0;}
+.flex-direction-nav .flex-prev{left:0; display: inline-block !important;font: normal normal normal 14px/1 FontAwesome !important;font-size: inherit !important;}
+.flex-direction-nav .flex-next{right:0; display: inline-block !important;font: normal normal normal 14px/1 FontAwesome !important;font-size: inherit !important;}
 .flexslider .flex-prev, .flexslider .flex-next{opacity:.5;}
 .flexslider:hover .flex-prev:hover, .flexslider:hover .flex-next:hover{opacity:1;}
 .flex-direction-nav .flex-disabled{visibility:hidden; opacity:0; cursor:default; z-index:-1;}

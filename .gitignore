@@ -6,4 +6,4 @@ images/img-project/Img603f0491de779.jpg
 *.jpg
 *.png
 
-Controller/Conexion.php
+/Controller/Conexion.php

@@ -38,6 +38,12 @@
   </div>
 </div> 
 <!-- Botón flotante -->
-<div id="haciaFuturo" class="share" data-toggle="tooltip" data-placement="left" title="#AleteoHaciaElFuturo">
+<!-- <div id="haciaFuturo" class="share" data-toggle="tooltip" data-placement="left" title="#AleteoHaciaElFuturo">
     #AF
+</div> -->
+
+<div class="BIA" data-toggle="tooltip" data-placement="left" title="Museo Interactivo">
+  <a href="http://museointeractivoaleteo.com/" target="_blank">
+    <img src="images/img-project/BIA01.gif">
+  </a>
 </div>

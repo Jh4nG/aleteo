@@ -8,7 +8,7 @@ class Conexion {
     private $socket   = "";
     private $user     = "root";
     private $password = "";
-    private $dbname   = "aleteo";
+    private $dbname   = "aleteo_firts";
 
     public function __construct(){
         self::iniciar();
