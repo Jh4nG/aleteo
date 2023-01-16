@@ -32,11 +32,13 @@ var _Index = (function (){
                     if(i==0){
                         addClass = "first";
                     }
+                    pix = (e.sec_titulo.length>25) ? "155px":"160px";
+                    
                     text += '<li class="one_third '+addClass+'">'+
                             '<article>'+
-                                '<div style="min-height: 155px;">'+
+                                '<div style="min-height: '+pix+';">'+
                                     '<h6 class="heading">'+e.sec_titulo+'</h6>'+
-                                    '<p>'+e.sec_desc+'[&hellip;]</p>'+
+                                    '<p style="text-align:justify;">'+e.sec_desc.substr(0,110)+'[&hellip;]</p>'+
                                 '</div>'+
                                 '<img src="images/img-project/'+e.sec_img+'" alt="">'+
                                 '<footer><a href="'+e.sec_link_redirect+'">Más Detalles</a></footer>'+
