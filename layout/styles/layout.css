@@ -9,8 +9,8 @@ File: Layout CSS
 */
 
 @import url("fontawesome-4.6.3.min.css");
-@import url("custom.flexslider.css");
-@import url("frameworkV2.css");
+@import url("custom.flexslider.css?v=2");
+@import url("frameworkV2.css?v=2");
 @import url(../styles/bootstrap.min.css);
 @import url(../styles/classy-nav.min.css);
 /* Rows
@@ -691,7 +691,7 @@ table a, #comments a{background-color:inherit;}
 		.divImg{
 			display: block;
 			position: relative;		
-			max-width: 750px;
+			max-width: 100%;
 			border-radius:15px;
 		}
 
@@ -701,10 +701,11 @@ table a, #comments a{background-color:inherit;}
 			display: block;
 			position: absolute;
 			bottom: -16px;
-			transform: translate(2%, -10%);
+			transform: translate(0%, -10%);
 			left: 0;
 			padding: 20px;
 			width: 750px;
+			z-index: 100;
 		}
 
 		.centrado>a{
@@ -728,10 +729,11 @@ table a, #comments a{background-color:inherit;}
 			display: block;
 			position: absolute;
 			bottom: -16px;
-			transform: translate(3%, -10%);
+			transform: translate(0%, -10%);
 			left: 0;
 			padding: 20px;
-			width: 94%;
+			width: 100%;
+			z-index: 100;
 		}
 
 		.centrado2>a{
@@ -772,6 +774,7 @@ table a, #comments a{background-color:inherit;}
 			bottom: -16px;
 			left: 0;
 			padding: 3px 10px 0px 10px;
+			z-index: 100;
 		}
 
 		.marginPeriodicoTop {
@@ -788,7 +791,8 @@ table a, #comments a{background-color:inherit;}
 		.divImg{
 			display: block;
 			position: relative;		
-			max-width: 600px;
+			/* max-width: 600px; */
+			max-width: 100%;
 			border-radius:15px;
 		}
 
@@ -802,6 +806,7 @@ table a, #comments a{background-color:inherit;}
 			left: 0;
 			padding: 20px;
 			width: 600px;
+			z-index: 100;
 		}
 
 		.centrado>a{
@@ -825,10 +830,11 @@ table a, #comments a{background-color:inherit;}
 			display: block;
 			position: absolute;
 			bottom: -16px;
-			transform: translate(3%, -10%);
+			transform: translate(0%, -10%);
 			left: 0;
 			padding: 20px;
-			width: 385px;
+			width: 100%;
+			z-index: 100;
 		}
 
 		.centrado2>a{
@@ -861,6 +867,7 @@ table a, #comments a{background-color:inherit;}
 			bottom: -16px;
 			left: 0;
 			padding: 3px 10px 0px 10px;
+			z-index: 100;
 		}
 
 		.marginPeriodicoTop {
@@ -898,6 +905,7 @@ table a, #comments a{background-color:inherit;}
 			padding: 20px;
 			width: 96%;
 			font-size: 10px;
+			z-index: 100;
 		}
 
 		.centrado>a{
@@ -924,6 +932,7 @@ table a, #comments a{background-color:inherit;}
 			left: 0;
 			padding: 20px;
 			width: 100%;
+			z-index: 100;
 		}
 
 		.centrado2>a{
@@ -948,7 +957,7 @@ table a, #comments a{background-color:inherit;}
 			bottom: -16px;
 			left: 0;
 			padding: 3px 10px 0px 10px;
-
+			z-index: 100;
 			/* float: right;
 			margin: 1em 3em 1em 1em;
 			width: 400px; */
@@ -1258,4 +1267,27 @@ table a, #comments a{background-color:inherit;}
 
 	.BIA > img{
 		width: 100%;
+	}
+
+	.card-header {
+		border-bottom: 1px solid rgb(255 255 255 / 13%);
+	}
+
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	
+	::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px rgb(133, 131, 131);
+		border-radius: 10px;
+	}
+	
+	::-webkit-scrollbar-thumb {
+		background: #ada3a3;
+		border-radius: 10px;
+	}
+	
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #5f5a5a;
 	}

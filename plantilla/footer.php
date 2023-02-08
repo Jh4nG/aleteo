@@ -4,7 +4,7 @@
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <nav>
-      <ul class="nospace inline pushright uppercase" id="contentFooter" style="background: #fff;"></ul>
+      <ul class="nospace inline pushright uppercase" id="contentFooter" style="background: #000;border-bottom: 1px solid;"></ul>
     </nav>
     <div class="col-md-12 row">
       <div class="col-md-4">

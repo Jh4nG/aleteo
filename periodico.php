@@ -1,4 +1,5 @@
 <?php include "plantilla/head.php";?>
+<link href="layout/styles/periodico.css" rel="stylesheet" type="text/css" media="all">
 
   <body id="top" class="bgded imgFirts">
     <!-- Incluyendo navegador -->
@@ -15,7 +16,7 @@
             <div class="col-md-12" style="border-radius: 15px;">
               <br>
               <div class="row ">
-                  <div class="col-md-8">
+                  <div class="col-md-12">
                       <div class="col-md-12 divCentrado" id="principalNoticia">
                         
                       </div>
@@ -50,10 +51,10 @@
       <div class="modal-dialog modal-lg" id="modal-large-dialog" style="max-width: 1200px;">
       
         <!-- Modal content-->
-        <div class="modal-content">
+        <div class="modal-content bgDarkModal ModalRed">
           <div class="modal-header">
             <h4 id="modal-title-lg" class="modal-title"></h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="closeBg" data-dismiss="modal">&times;</button>
           </div>
           <div id="modal-body-lg-periodico" class="modal-body" style="background-image:url('images/img-project/Fondo 2.png');text-align: justify;">
           </div>
@@ -65,6 +66,6 @@
     <?php require_once 'plantilla/footer.php'; ?>
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>
-    <script type="text/javascript" src="js/periodico.js"></script>
+    <script type="text/javascript" src="js/periodico.js?v=2"></script>
   </body>
 </html>

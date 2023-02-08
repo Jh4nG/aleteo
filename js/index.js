@@ -34,7 +34,7 @@ var _Index = (function (){
                     }
                     pix = (e.sec_titulo.length>25) ? "155px":"160px";
                     
-                    text += '<li class="one_third '+addClass+'">'+
+                    text += '<li class="one_third one_third_card '+addClass+'">'+
                             '<article>'+
                                 '<div style="min-height: '+pix+';">'+
                                     '<h6 class="heading">'+e.sec_titulo+'</h6>'+

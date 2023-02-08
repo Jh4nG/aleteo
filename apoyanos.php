@@ -1,5 +1,10 @@
 <?php include "plantilla/head.php";?>
 
+  <style>
+    .overlay::after{
+      height: 230vh;
+    }
+  </style>
   <body id="top" class="bgded imgFirts">
     <!-- Incluyendo navegador -->
     <?php include "plantilla/navbar.php"; ?>
@@ -42,12 +47,6 @@
     </div>
   </div>
   
-
-
-  
-    <div style="margin-top:100px;"></div>
-    <div style="margin-top:100px;"></div>
-    <div style="margin-top:100px;"></div>
     <?php require_once 'plantilla/footer.php'; ?>
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>

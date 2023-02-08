@@ -5,52 +5,7 @@
     <!-- Incluyendo navegador -->
     <?php include "plantilla/navbar.php"; ?>
     <div style="margin-top:100px;"></div>
-    <div class="row col-md-12" align="center">
-      <div class="col-md-3 col-12">
-        <div class="card">
-          <div class="imgbox">
-              <div class="img">
-              </div>
-          </div>
-          <div class="details">
-              <h2 class="title">John Doe</h2>
-              <span class="caption">Developer</span>
-          </div>
-        </div> 
-      </div>
-      <div class="col-md-3 col-12">
-        <div class="card">
-          <div class="imgbox">
-              <div class="img"></div>
-          </div>
-          <div class="details">
-              <h2 class="title">John Doe</h2>
-              <span class="caption">Developer</span>
-          </div>
-        </div> 
-      </div>
-      <div class="col-md-3 col-12">
-        <div class="card">
-          <div class="imgbox">
-              <div class="img"></div>
-          </div>
-          <div class="details">
-              <h2 class="title">John Doe</h2>
-              <span class="caption">Developer</span>
-          </div>
-        </div> 
-      </div>
-      <div class="col-md-3 col-12">
-        <div class="card">
-          <div class="imgbox">
-              <div class="img"></div>
-          </div>
-          <div class="details">
-              <h2 class="title">John Doe</h2>
-              <span class="caption">Developer</span>
-          </div>
-        </div> 
-      </div>
+    <div id="divContentParticipantes" class="row col-md-12" align="center">
     </div>
     <?php require_once 'plantilla/footer.php'; ?>
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>

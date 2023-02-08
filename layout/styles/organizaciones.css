@@ -1,0 +1,166 @@
+.card {
+    height: 95%;
+    transition: all .5s;
+    box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11),
+        -15px -15px 30px rgba(60, 60, 60, 0.082);
+    text-align: center;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.card:hover {
+    height: 97%;
+    background: linear-gradient(360deg, #edededc5 60%, hsla(0, 0%, 13%, 1) 70%);
+}
+
+.card .header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    margin-bottom: 16px;
+}
+
+.card .header .img-box {
+    width: 50%;
+}
+
+.card .header .title {
+    font-size: 1.1em;
+    letter-spacing: .1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 4px 0 14px 0;
+    transition: all .5s;
+    color: #edededc5;
+}
+
+.card:hover .header {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+}
+
+.card:hover .card .header .title {
+    padding: 0;
+}
+
+.card .content {
+    display: block;
+    text-align: justify;
+    color: #212121;
+    margin: 0 18px;
+}
+
+.card .content p {
+    transition: all .5s;
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+
+.card .content a {
+    color: #2f2bd6;
+    cursor: pointer;
+    transition: all .5s;
+    font-size: .8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.card .content .btn-link:hover {
+    border-bottom: 1px solid #2f2bd6;
+}
+
+.visible-modal {
+    background-color: transparent !important;
+}
+
+.closeBg{
+    background-color: transparent;
+    color: white;
+	cursor: pointer;
+    font-size: 20px;
+}
+
+.bgNoBorder{
+    /* .modal-header{
+        border-bottom : none;
+    }
+    .modal-footer{
+        border-top : none;
+    } */
+}
+
+.bgTransparentModal{
+    background-color: transparent;
+
+    /* .modal-header{
+        .closeBg{
+            display: none;
+        }
+    }
+    .modal-dialog{
+        .bgNoBorder{
+            height: 100%;
+            width: 100%;
+        }
+    } */
+}
+
+.bgDarkModal{
+    background-color: black;
+    color: white;
+}
+
+.bgDarkImportant{
+    background-color: black !important;
+}
+
+.ModalBlue{
+    background-image: url('../../images/img-project/FondoAzul.png');
+    text-align: justify;
+    background-size: cover;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 30px transparent, 0px 0px 60px #2f2bd6;
+}
+
+.ModalRed{
+    background-image: url('../../images/img-project/FondoRojo.png');
+    text-align: justify;
+    background-size: cover;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 30px transparent, 0px 0px 60px #d82b2b;
+}
+
+.ModalGray{
+    background-image: url('../../images/img-project/Fondo 2.png');
+    text-align: justify;
+    background-size: cover;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 30px transparent, 0px 0px 60px #ada3a3;
+}
+
+.ModalVirtual {
+    background: transparent;
+    /* border: 2px solid #2f2bd6; */
+    box-shadow: 2px 2px 15px #000000 inset;
+    text-align: center;
+    color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pacifico';
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 30px 1px #2f2bd6;
+}
+
+.hideClose.modal-header.closeBg{
+    display: none;
+}
+
+.hiddenOverFlow{
+    overflow: hidden;
+}

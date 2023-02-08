@@ -14,20 +14,26 @@ var _Periodico = (function (){
             if(data){
                 $.each(data,(i,e)=>{
                     if(i==0){
-                        text = '<img src="images/img-project/'+e.per_link_img+'" class="divImg">'+
-                                    '<div class="centrado">'+
-                                        '<a href="#!" onclick="_Periodico.viewPer('+e.id_periodico+')">'+
-                                            '<h4>'+e.per_titulo+'</h4>'+
-                                        '</a>'+
-                                        e.per_contratitulo+
-                                    '<div style="float:right;margin: 13px 0px 0px 0px;">'+
-                                        '<time >'+e.fecha_publico+'</time>'+
-                                    '</div>'+
-                                '</div>';
+                        text = `
+                        <div class="glitch">
+                            <img src="images/img-project/${e.per_link_img}" class="divImg">
+                            <div class="centrado">
+                                <a href="#!" onclick="_Periodico.viewPer(${e.id_periodico})">
+                                <h4>${e.per_titulo}</h4>
+                                </a>
+                                ${e.per_contratitulo}
+                                <div style="float:right;margin: 13px 0px 0px 0px;">
+                                    <time >${e.fecha_publico}</time>
+                                </div>
+                            </div>
+                            <div class="glitch__layers" data-img="${e.per_link_img}">
+                            </div>
+                        </div>
+                                `;
                         $('#principalNoticia').append(text);
                     }else{
                         text = '<div class="col-md-4 col-sm-12">'+
-                                    '<div class="col-md-12 divCentrado">'+
+                                    '<div class="divCentrado glitch">'+
                                         '<img src="images/img-project/'+e.per_link_img+'" class="divImg2">'+
                                         '<div class="centrado2">'+
                                             '<a href="#!" onclick="_Periodico.viewPer('+e.id_periodico+')">'+
@@ -37,10 +43,25 @@ var _Periodico = (function (){
                                                 '<time >'+e.fecha_publico+'</time>'+
                                             '</div>'+
                                         '</div>'+
+                                        `<div class="glitch__layers" data-img="${e.per_link_img}"></div>`+
                                     '</div>'+
                                 '</div>';
                         $('#divSubNoticias').append(text);
                     }
+                });
+                $(".glitch__layers").hover(function(){
+                    $(this).html('<div class="glitch__layer"></div><div class="glitch__layer"></div><div class="glitch__layer"></div>');
+                    $('.glitch__layer').css('background-image',`url(images/img-project/${$(this).data('img')})`);
+                }, function(){
+                    $('.glitch__layer').css('background-image','');
+                    $(this).html('');
+                });
+                $(".centrado,.centrado2").hover(function(){
+                    $(this).parent().children('div.glitch__layers').html('<div class="glitch__layer"></div><div class="glitch__layer"></div><div class="glitch__layer"></div>');
+                    $('.glitch__layer').css('background-image',`url(images/img-project/${$(this).parent().children('div.glitch__layers').data('img')})`);
+                }, function(){
+                    $('.glitch__layer').css('background-image','');
+                    $(this).parent().children('div.glitch__layers').html('');
                 });
             }
         });
@@ -53,14 +74,18 @@ var _Periodico = (function (){
         $.when(ajaxJson(ruta,data,type)).done((data)=>{
             $('#modal-title-lg').html('<h1><b>'+data[0].per_titulo+'</b></h1>');
             $('#modal-body-lg-periodico').html('');
-            $('#modal-body-lg-periodico').append('<div class="divImgPeriodico">'+
+            $('#modal-body-lg-periodico').append('<div class="divImgPeriodico glitch">'+
                                                     '<img src="images/img-project/'+data[0].per_link_img+'" >'+
                                                     '<div class="centradoDivPer">'+
                                                         '<p>'+data[0].	per_link_pie_img+'</p>'+
                                                     '</div>'+
+                                                    '<div class="glitch__layers"><div class="glitch__layer"></div><div class="glitch__layer"></div><div class="glitch__layer"></div></div>'+
                                                  '</div>');
             $('#modal-body-lg-periodico').append(data[0].per_texto);            
             $('#modal-view-periodico').modal('show');
+            setTimeout(() => {
+                $('.glitch__layer').css('background-image',`url(images/img-project/${data[0].per_link_img})`);
+            }, 1000);
         });
     }
 

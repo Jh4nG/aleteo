@@ -66,6 +66,6 @@
     <!-- ################################################################################################ -->
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/index.js?v=3"></script>
   </body>
 </html>
