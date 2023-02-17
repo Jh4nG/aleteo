@@ -180,6 +180,7 @@ var _PodcastWeb = (function (){
     }
 
     const playpause = (element)=>{
+        console.log('pasa');
         let currentTime = element.parent().parent().children('.controls-music-container').children('.time-container').children('.CurrentSongTime');
         let songLength = element.parent().parent().children('.controls-music-container').children('.time-container').children('.SongLength');
         let progress = element.parent().parent().children('.controls-music-container').children('.progress-song-container').children('.progress-bar').children('.progress');
@@ -211,14 +212,72 @@ var _PodcastWeb = (function (){
         audio.currentTime = audio.currentTime + time;
     }
 
+    const getPodcast = (target)=>{
+        const id = target.target.dataset.category;
+        const title = target.target.dataset.originalTitle;
+        var ruta = 'Controller/Podcast.controller.php';
+        var data = {"metodo":"listarPodcastIdCategory", id};
+        var type = 'post';
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            $("#contentPodcast").html('');
+            $('#modal-title-lg').html(title);
+            $.each(data, function(key, val){
+                descripcion = val.descripcion.split('\n');
+                desc = "";
+                $.each(descripcion,(i,e)=>{
+                    desc += '<p class="card-text">'+e+'</p>';
+                });
+                var card = '<div class="row">'+
+                                '<div class="col-md-12">'+
+                                    '<div class="card" style="width:100%">'+
+                                        '<h5 class="card-header"><b>'+title+'</b></h5>'+
+                                        '<div class="card-body">'+
+                                            '<h5 class="card-title"><b>'+val.nombre+'</b></h5>'+
+                                            desc+
+                                            `
+                                            <div class="music-player-container reprod${key}">
+                                                <div class="controls-music-container">
+                                                    <div class="progress-song-container">
+                                                        <div class="progress-bar">
+                                                            <span class="progress"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time-container">
+                                                        <span class="time-left CurrentSongTime"></span>
+                                                        <span class="time-left SongLength"></span>
+                                                    </div>
+                                                </div>
+                                                <audio controls preload="metadata" src="audios/${val.link}"></audio>
+                                                <div class="main-song-controls">
+                                                    <img src="images/img-project/Backward.svg" alt="" class="icon Back10">
+                                                    <img src="images/img-project/Play.svg" alt="" class="icon PlayPause">
+                                                    <img src="images/img-project/Forward.svg" alt="" class="icon Plus10">
+                                                </div>
+                                            </div>
+                                            `+
+                                        '</div>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div><br>';
+                $("#contentPodcast").append(card);
+            });
+            $('#modal-view-podcast').modal('show');
+            $('.PlayPause').on('click',(i)=>{ playpause($(i.target)); });
+            $('.Back10').on('click',(i)=>{ audioBarra($(i.target),-10) });
+            $('.Plus10').on('click',(i)=>{ audioBarra($(i.target),+10) });
+        });
+    }
+
     return {
         iniciar:iniciar,
         traerPodcast:traerPodcast,
-        ingresarComent:ingresarComent
+        ingresarComent:ingresarComent,
+        getPodcast
     }
 })(jQuery);
 $(document).ready(function(){
     ingresoPagina('Podcast');
     _PodcastWeb.iniciar();
     _PodcastWeb.traerPodcast();
+    $('.getPodcast').on('click',_PodcastWeb.getPodcast)
 });

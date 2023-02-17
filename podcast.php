@@ -4,8 +4,8 @@
     
     <!-- Incluyendo navegador -->
     <?php include "plantilla/navbar.php"; ?>
-      <div style="margin-top:100px;"></div>
-      <div class="contentDivPodcast row" >
+      <div style="margin-top: 5%;"></div>
+      <!-- <div class="contentDivPodcast row" >
       
         <div class="col-md-9 row">
           <div class="nav flex-column nav-pills col-md-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -33,17 +33,35 @@
             </div>
             <br>
         </div>
+      </div> -->
+
+      <?php include 'componentes/componentePodcastImg.php'; ?>
+      
+      <div style="margin-top:100px;"></div>
+      <div style="margin-top:100px;"></div>
+      <div style="margin-top:100px;"></div>
+      <div style="margin-top:100px;"></div>
+
+      <div class="modal fade " id="modal-view-podcast" role="dialog">
+        <div class="modal-dialog modal-lg" id="modal-large-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content bgDarkModal ModalBlue">
+            <div class="modal-header">
+              <h4 id="modal-title-lg" class="modal-title"></h4>
+              <button type="button" class="closeBg" data-dismiss="modal">&times;</button>
+            </div>
+            <div id="modal-body-lg-podcast" class="modal-body">
+              <div id="contentPodcast" style="padding-right: 50px;padding-left: 50px;"></div>
+            </div>
+          </div>
+          
+        </div>
       </div>
-
-      <?php include 'prueba.php'; ?>
-
-      <div style="margin-top:100px;"></div>
-      <div style="margin-top:100px;"></div>
-      <div style="margin-top:100px;"></div>
-      <div style="margin-top:100px;"></div>
     <?php require_once 'plantilla/footer.php'; ?>
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>
+    <script type="text/javascript" src="js/podcastComponent.js"></script>
     <script type="text/javascript" src="js/podcast.js?v=2"></script>
   </body>
 </html>

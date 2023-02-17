@@ -8,7 +8,7 @@
     margin-top: 10px;
 }
 .card:hover{
-    box-shadow: 0px 0px 30px 1px #2f2bd6;
+    box-shadow: 0px 0px 10px 1px #737299;
 }
 
 .music-player-container{
@@ -166,4 +166,120 @@ audio{
   width: 32px;
   height: 32px;
   fill: #1da1f2;
+}
+
+
+.closeBg{
+    background-color: transparent;
+    color: white;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.bgNoBorder{
+    /* .modal-header{
+        border-bottom : none;
+    }
+    .modal-footer{
+        border-top : none;
+    } */
+}
+
+.bgTransparentModal{
+    background-color: transparent;
+
+    /* .modal-header{
+        .closeBg{
+            display: none;
+        }
+    }
+    .modal-dialog{
+        .bgNoBorder{
+            height: 100%;
+            width: 100%;
+        }
+    } */
+}
+
+.bgDarkModal{
+    background-color: black;
+    color: white;
+}
+
+.bgDarkImportant{
+    background-color: black !important;
+}
+
+.ModalBlue{
+    background-image: url('../../images/img-project/FondoAzul.png');
+    text-align: justify;
+    background-size: cover;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 30px transparent, 0px 0px 60px #2f2bd6;
+}
+
+.ModalRed{
+    background-image: url('../../images/img-project/FondoRojo.png');
+    text-align: justify;
+    background-size: cover;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 30px transparent, 0px 0px 60px #d82b2b;
+}
+
+.ModalGray{
+    background-image: url('../../images/img-project/Fondo 2.png');
+    text-align: justify;
+    background-size: cover;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 30px transparent, 0px 0px 60px #ada3a3;
+}
+
+.ModalVirtual {
+    background: transparent;
+    /* border: 2px solid #2f2bd6; */
+    box-shadow: 2px 2px 15px #000000 inset;
+    text-align: center;
+    color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pacifico';
+    transition: all 0.3s;
+}
+
+.modal-body > h4 {
+    font-size: 1.2rem !important;
+}
+
+.imgPuntos{
+    cursor:pointer;
+    position: absolute;
+    z-index: 999;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+}
+
+.imgPuntoPodcast{
+    background-image: url('../../images/img-project/PuntoRojo.gif');
+    top: 75%;
+    left: 14.5%;
+}
+
+.imgPuntoMicroPodcast{
+    background-image: url('../../images/img-project/PuntoAzul.gif');
+    top: 27%;
+    left: 38%;
+}
+
+.imgPuntoEntrevistas{
+    background-image: url('../../images/img-project/PuntoVerde.gif');
+    bottom: 30%;
+    right: 13%;
+}
+
+.imgPuntoEstrella{
+    background-image: url('../../images/img-project/Estrella2.gif');
+    top: 6%;
+    left: 64%;
 }

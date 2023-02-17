@@ -20,6 +20,18 @@ class Podcast extends Conexion{
         }
     }
 
+    public function listarPodcastIdCategory()
+    {
+        $sql = "SELECT * FROM podcast WHERE categoria = ? ORDER BY fecha_creacion DESC";
+        $rdb = $this->con_aleteo->prepare($sql);
+        if($rdb->execute(array($_POST['id']))){
+            $obj = $rdb -> fetchAll(PDO::FETCH_OBJ);
+            echo json_encode($obj);
+        }else{
+            echo json_encode(false);
+        }
+    }
+
     public function listarOpiniones()
     {
         $sql ="SELECT * FROM opiniones

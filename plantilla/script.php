@@ -17,3 +17,5 @@
 <script src="js/sweetAlert/sweetalert.min.js"></script>
 <!-- Global js -->
 <script src="js/aleteo.js"></script>
+<!-- TweenMax js -->
+<script src="layout/scripts/TweenMax.min.js"></script>
