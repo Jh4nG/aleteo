@@ -16,6 +16,6 @@
 <!-- Swal js -->
 <script src="js/sweetAlert/sweetalert.min.js"></script>
 <!-- Global js -->
-<script src="js/aleteo.js"></script>
+<script src="js/aleteo.js?v=2"></script>
 <!-- TweenMax js -->
 <script src="layout/scripts/TweenMax.min.js"></script>

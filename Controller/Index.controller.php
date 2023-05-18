@@ -15,8 +15,7 @@ class Index extends Conexion{
     public function traerInfoClt(){
         $sql ="SELECT *
             FROM cliente c 
-            WHERE c.id = 1
-            $this->order"; // Cliente Aleteo
+            WHERE c.id = 1"; // Cliente Aleteo
         $rdb = $this->con_aleteo->prepare($sql);
         if($rdb->execute()){
             echo json_encode($rdb -> fetchAll(PDO::FETCH_OBJ));

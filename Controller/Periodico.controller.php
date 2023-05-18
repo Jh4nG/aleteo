@@ -4,6 +4,8 @@ require_once dirname(__FILE__).'/Conexion.php';
 class Index extends Conexion{
 
     public $order;
+    private $meses = array();
+    private $groserias = array();
     public function __construct(){
         parent::__construct();
         $this->meses = array("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");

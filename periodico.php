@@ -28,20 +28,20 @@
           </div>
           <div class="col-md-3 col-sm-12">
             <br>
-            <div class="col-md-12" style="background-color:white;border-radius: 15px; overflow: scroll; max-height: 470px;">
+            <h3 style="color:white">Comentarios</h3>
+            <div class="col-md-12 cssComentarios" style="max-height: 470px;">
               <br>
               <textarea class="form-control" placeholder="Realizar Comentario " id="comentarioPeriodico"></textarea>
               <br>
               <button class="btn btn-primary pull-right" id="btnComentarioPeriodico" onclick="_Periodico.ingresarComent()">Comentar</button>
               <br><br>
-              <div id="divOpiniones"></div>
+              <div id="divOpiniones" class="divOpiniones"></div>
             </div>
             <br>
           </div>
           
           <div class="col-md-12" style="margin-top:20px;max-height: 700px;overflow: auto;">
-            <div class="col-md-12 row" id="divSubNoticias" style="">
-            </div>
+            <div class="col-md-12 row" id="divSubNoticias"></div>
           </div>
         </div>
         
@@ -66,6 +66,6 @@
     <?php require_once 'plantilla/footer.php'; ?>
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>
-    <script type="text/javascript" src="js/periodico.js?v=2"></script>
+    <script type="text/javascript" src="js/periodico.js?v=3"></script>
   </body>
 </html>

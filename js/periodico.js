@@ -90,20 +90,7 @@ var _Periodico = (function (){
     }
 
     var listarOpiniones = () => {
-        $("#divOpiniones").html('');
-        var ruta = 'Controller/Periodico.controller.php';
-        var data = {"metodo":"listarOpiniones"};
-        var type = 'post';
-        $.when(ajaxJson(ruta,data,type)).done((data)=>{
-            $.each(data, function(key, val){
-                var article = '<article>'+
-                                    '<b>Anónimo</b>'+
-                                    '<footer>'+val.texto_opinion+'</footer>'+
-                                    '<b>'+val.fecha_opinion_text+'</b>'+
-                                '</article><br>';
-                $("#divOpiniones").append(article);            
-            });
-        });
+        _Aleteo.listarOpiniones("divOpiniones",'Controller/Periodico.controller.php',"listarOpiniones");
     }
 
     var ingresarComent = () =>{

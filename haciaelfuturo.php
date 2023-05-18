@@ -17,7 +17,7 @@
       <div class="col-sm-12">
         <br>
         <h3 style="color:white">Comentarios</h3>
-        <div class="col-md-12" style="background-color:white;border-radius: 15px; overflow: scroll; max-height: 470px;">
+        <div class="col-md-12 cssComentarios" style="max-height: 470px;">
           <br>
           <textarea class="form-control" placeholder="Realizar Comentario " id="comentarioFuturo"></textarea>
           <br>
@@ -35,6 +35,6 @@
     <?php require_once 'plantilla/footer.php'; ?>
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>
-    <script type="text/javascript" src="js/haciaelfuturo.js?v=<?php echo TIME?>"></script>
+    <script type="text/javascript" src="js/haciaelfuturo.js"></script>
   </body>
 </html>

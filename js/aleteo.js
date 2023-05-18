@@ -171,10 +171,28 @@ var _Aleteo = (function (){
         });
     }
 
+    var listarOpiniones = (div,ruta,metodo) => {
+        $(`#${div}`).html('');
+        var data = {metodo};
+        var type = 'post';
+        $.when(ajaxJson(ruta,data,type)).done((data)=>{
+            $.each(data, function(key, val){
+                var article = '<article>'+
+                                    '<b>Anónimo</b>'+
+                                    '&nbsp;&nbsp;<footer>'+val.texto_opinion+'</footer>'+
+                                    '<i>&nbsp;&nbsp;'+val.fecha_opinion_text+'</i>'+
+                                '</article>';
+                ((key+1) != data.length) ? article += '<hr>' : article += '<br>';
+                $(`#${div}`).append(article);
+            });
+        });
+    }
+
     return {
         iniciar:iniciar,
         verificarConstr:verificarConstr,
-        addSuscricpcion:addSuscricpcion
+        addSuscricpcion:addSuscricpcion,
+        listarOpiniones
     }
 })(jQuery);
 $(document).ready(function(){
@@ -185,5 +203,8 @@ $(document).ready(function(){
     });
     $('#haciaFuturo').on('click',()=>{
         window.location.href = "haciaelfuturo.php";
+    });
+    $('#subaseAlFuturo').on('click',()=>{
+        window.location.href = "futureSuba.php";
     });
 });

@@ -2,6 +2,9 @@
 require_once dirname(__FILE__).'/Conexion.php';
 
 class Futuro extends Conexion{
+
+    private $meses;
+    private $groserias;
     public function __construct(){
         parent::__construct();
         $this->meses = array("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");

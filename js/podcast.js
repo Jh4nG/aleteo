@@ -133,20 +133,7 @@ var _PodcastWeb = (function (){
     }
 
     var listarOpiniones = () => {
-        $("#divOpiniones").html('');
-        var ruta = 'Controller/Podcast.controller.php';
-        var data = {"metodo":"listarOpiniones"};
-        var type = 'post';
-        $.when(ajaxJson(ruta,data,type)).done((data)=>{
-            $.each(data, function(key, val){
-                var article = '<article>'+
-                                    '<b>Anónimo</b>'+
-                                    '<footer>'+val.texto_opinion+'</footer>'+
-                                    '<b>'+val.fecha_opinion_text+'</b>'+
-                                '</article><br>';
-                $("#divOpiniones").append(article);
-            });
-        });
+        _Aleteo.listarOpiniones("divOpiniones",'Controller/Podcast.controller.php',"listarOpiniones");
     }
 
     var ingresarComent = () =>{
@@ -169,7 +156,6 @@ var _PodcastWeb = (function (){
                 swal("Error", "Ha habido un problema!",_error);
             }
         });
-
     }
 
     const calculateTime = (secs) =>{
@@ -180,13 +166,18 @@ var _PodcastWeb = (function (){
     }
 
     const playpause = (element)=>{
-        console.log('pasa');
+        let parent = element.parent().parent().parent().parent().parent().parent().parent();
         let currentTime = element.parent().parent().children('.controls-music-container').children('.time-container').children('.CurrentSongTime');
         let songLength = element.parent().parent().children('.controls-music-container').children('.time-container').children('.SongLength');
         let progress = element.parent().parent().children('.controls-music-container').children('.progress-song-container').children('.progress-bar').children('.progress');
         let audio = element.parent().parent().children('audio')[0];
         songLength.html(calculateTime(audio.duration));
         if(audio.paused){
+            let parentAudios = (parent[0].id != '') ? $(`#${parent[0].id} audio`) : $(`.${parent.attr('class')} audio`);
+            parentAudios.each((i,e)=>{ 
+                e.pause();
+                $(e).parent().children('.main-song-controls').children('.PlayPause').attr('src',`images/img-project/Play.svg`);
+            });
             element.attr('src',`images/img-project/pause.svg`);
             audio.play();
         }else{
@@ -279,5 +270,13 @@ $(document).ready(function(){
     ingresoPagina('Podcast');
     _PodcastWeb.iniciar();
     _PodcastWeb.traerPodcast();
-    $('.getPodcast').on('click',_PodcastWeb.getPodcast)
+    $('.getPodcast').on('click',_PodcastWeb.getPodcast);
+
+    $('#modal-view-podcast').on('hide.bs.modal', function(e) {
+        $('audio').each((i,e)=>{
+            e.pause();
+            e.currentTime = 0;
+        });
+        $('.main-song-controls').children('.PlayPause').attr('src',`images/img-project/Play.svg`);
+    });
 });

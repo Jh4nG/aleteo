@@ -114,19 +114,7 @@ var _SerieWeb = (function (){
 
 
     var listarOpiniones = () => {
-        $("#divOpinionesSerieWeb").html('');
-        var data = {"metodo":"listarOpiniones"};
-        var type = 'post';
-        $.when(ajaxJson(ruta,data,type)).done((data)=>{
-            $.each(data, function(key, val){
-                var article = '<article>'+
-                                    '<b>Anónimo</b>'+
-                                    '<footer>'+val.texto_opinion+'</footer>'+
-                                    '<b>'+val.fecha_opinion_text+'</b>'+
-                                '</article><br>';
-                $("#divOpinionesSerieWeb").append(article);            
-            });
-        });
+        _Aleteo.listarOpiniones("divOpinionesSerieWeb",ruta,"listarOpiniones");
     }
 
     var ingresarComent = () =>{

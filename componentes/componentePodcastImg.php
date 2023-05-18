@@ -10,6 +10,7 @@
   height:100vh;
   overflow:hidden;
   box-sizing:border-box;
+  background-size: cover;
 }
 
 

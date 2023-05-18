@@ -1,5 +1,5 @@
 <?php include "plantilla/head.php";?>
-  <link href="layout/styles/podcast.css" rel="stylesheet" type="text/css" media="all">
+  <link href="layout/styles/podcast.css?v=2" rel="stylesheet" type="text/css" media="all">
   <body id="top" class="particle-slider bgded imgFirts">
     
     <!-- Incluyendo navegador -->
@@ -37,10 +37,20 @@
 
       <?php include 'componentes/componentePodcastImg.php'; ?>
       
-      <div style="margin-top:100px;"></div>
-      <div style="margin-top:100px;"></div>
-      <div style="margin-top:100px;"></div>
-      <div style="margin-top:100px;"></div>
+
+      <div class="col-md-12 col-sm-12" align="center">
+          <br>
+          <h3 style="color:white">Comentarios</h3>
+          <div class="col-md-6 cssComentarios" style="max-height: 470px;" align="left">
+            <br>
+            <textarea class="form-control" placeholder="Realizar Comentario " id="comentarioPodcast"></textarea>
+            <br>
+            <button class="btn btn-primary pull-right" id="btnComentarioPodcast" onclick="_PodcastWeb.ingresarComent()">Comentar</button>
+            <br><br>
+            <div id="divOpiniones" class="divOpiniones"></div>
+          </div>
+          <br>
+      </div>
 
       <div class="modal fade " id="modal-view-podcast" role="dialog">
         <div class="modal-dialog modal-lg" id="modal-large-dialog">
@@ -62,6 +72,6 @@
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>
     <script type="text/javascript" src="js/podcastComponent.js"></script>
-    <script type="text/javascript" src="js/podcast.js?v=2"></script>
+    <script type="text/javascript" src="js/podcast.js?v=3"></script>
   </body>
 </html>

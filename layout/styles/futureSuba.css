@@ -1,0 +1,995 @@
+.overlay::after {
+    height: 140%;
+}
+
+.overlay::after {
+    color: inherit;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.divSectionPrincipal {
+    height: 38.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.hidden {
+    display: none;
+}
+
+.iframe {
+    border: 1px solid blue;
+    border-radius: 15px;
+}
+
+/* Sección Artistas */
+.divArtistas .card {
+    width: 90%;
+    height: 75%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.2s;
+    padding: 15px;
+}
+
+.divArtistas .card:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+    filter: drop-shadow(0px 0px 10px rgb(0, 247, 255));
+}
+
+.divArtistas .card::after {
+    content: "Artistas";
+    height: fit-content;
+    width: 100%;
+    color: lightskyblue;
+    position: absolute;
+    z-index: 2;
+    bottom: 15%;
+    text-align: center;
+    animation: 2s dots infinite;
+}
+
+.divArtistas .card::before {
+    content: "";
+    height: 0.1em;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(00, 200, 255);
+    position: absolute;
+    z-index: 2;
+    bottom: 10%;
+    animation: 4s grow infinite;
+    align-self: flex-start;
+    margin-left: 10%;
+    filter: drop-shadow(0px 0px 10px #3fefef) drop-shadow(0px 0px 10px #3fefef);
+}
+
+.divArtistas .card svg {
+    filter: drop-shadow(0px 0px 10px #3fefef) drop-shadow(0px 0px 50px #3fefef);
+}
+
+.divArtistas path {
+    stroke-dasharray: 90;
+    animation: loop 4s infinite;
+}
+
+@keyframes loop {
+    0% {
+        stroke-dashoffset: 50;
+        stroke-dasharray: 90;
+    }
+
+    50% {
+        stroke-dashoffset: 100;
+        ;
+        stroke-dasharray: 50;
+    }
+
+    100% {
+        stroke-dashoffset: 50;
+        stroke-dasharray: 90;
+    }
+}
+
+@keyframes dots {
+    0% {
+        content: "Artistas."
+    }
+
+    25% {
+        content: "Artistas.."
+    }
+
+    50% {
+        content: "Artistas..."
+    }
+
+    75% {
+        content: "Artistas"
+    }
+
+    100% {
+        content: "Artistas."
+    }
+}
+
+@keyframes grow {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 80%
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+/* Fin Sección Artistas */
+
+/* Estilos Sección Podcast */
+.divPodcast .card {
+    width: 105%;
+    height: 100%;
+    background: #252525;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.divPodcast .ups {
+    display: flex;
+}
+
+.divPodcast .screw1 {
+    display: flex;
+    color: black;
+    border: 1px solid black;
+    background-color: lightgrey;
+    height: 0.75em;
+    width: 0.75em;
+    margin: 0.5em;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.divPodcast .screw2 {
+    display: flex;
+    color: black;
+    border: 1px solid black;
+    background-color: lightgrey;
+    height: 0.75em;
+    width: 0.7em;
+    margin-top: 0.5em;
+    margin-left: 15.8em;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.divPodcast .downs {
+    display: flex;
+}
+
+.divPodcast .screw3 {
+    display: flex;
+    color: black;
+    border: 1px solid black;
+    background-color: lightgrey;
+    height: 0.75em;
+    width: 0.75em;
+    margin-top: -1.3em;
+    margin-left: 0.5em;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.divPodcast .screw4 {
+    display: flex;
+    color: black;
+    border: 1px solid black;
+    background-color: lightgrey;
+    height: 0.75em;
+    width: 0.75em;
+    margin-top: -1.3em;
+    margin-left: 16.35em;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.divPodcast .card1 {
+    width: 230px;
+    height: 115px;
+    margin-top: 0.5em;
+    margin-left: 2.18em;
+    background-color: #FFF;
+    clip-path: polygon(5% 0, 95% 0, 100% 10%, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+    border-radius: 5px;
+}
+
+.divPodcast .line1 {
+    position: relative;
+    width: 200px;
+    height: 1px;
+    background-color: black;
+    top: 1em;
+    left: 0.8em;
+}
+
+.divPodcast .line2 {
+    position: relative;
+    width: 200px;
+    height: 1px;
+    background-color: black;
+    top: 2em;
+    left: 0.8em;
+}
+
+.divPodcast .yl {
+    display: flex;
+    width: 228px;
+    height: 50px;
+    background-color: #3e0058;
+    margin-top: 2.5em;
+    margin-left: 0.06em;
+}
+
+.divPodcast .roll {
+    width: 8em;
+    height: 2em;
+    margin-left: 3em;
+    border-radius: 15px;
+    background-color: #171717;
+    display: flex;
+}
+
+.divPodcast .tape {
+    width: 3em;
+    height: 1.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    background-color: #252525;
+}
+
+.divPodcast .s_wheel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border: 3px solid white;
+    border-radius: 50%;
+    animation: 2s run infinite linear;
+}
+
+.divPodcast .s1 {
+    position: absolute;
+    height: 1.8em;
+    width: .2em;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.divPodcast .s2 {
+    position: absolute;
+    height: 1.8em;
+    width: .2em;
+    border-radius: 5px;
+    transform: rotate(90deg);
+    background-color: white;
+}
+
+.divPodcast .s3 {
+    position: absolute;
+    height: 1.8em;
+    width: .2em;
+    border-radius: 5px;
+    transform: rotate(130deg);
+    background-color: white;
+}
+
+.divPodcast .s4 {
+    position: absolute;
+    height: 1.8em;
+    width: .2em;
+    border-radius: 5px;
+    transform: rotate(230deg);
+    background-color: white;
+}
+
+.divPodcast .window {
+    background-color: white;
+    width: auto;
+    height: 2em;
+}
+
+.divPodcast .e_wheel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border: 3px solid white;
+    border-radius: 50%;
+    animation: 2s run infinite linear;
+}
+
+.divPodcast .num {
+    color: white;
+    margin-left: 1em;
+    align-self: center;
+}
+
+.divPodcast .or {
+    display: flex;
+    width: 230px;
+    height: 18px;
+    background-color: rgb(196 171 171);
+    margin-top: 0.4em;
+    margin-left: 0em;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.divPodcast .time {
+    font-size: 0.5em;
+}
+
+.divPodcast .card2_main {
+    filter: drop-shadow(4px 4px 14px rgba(0, 0, 0, 1));
+}
+
+.divPodcast .card2 {
+    width: 150px;
+    height: 50px;
+    margin-top: 0em;
+    margin-left: 4.6em;
+    background-color: #252525;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.divPodcast .screw5 {
+    position: relative;
+    display: flex;
+    color: black;
+    border: 1px solid black;
+    background-color: lightgrey;
+    height: 0.75em;
+    width: 0.75em;
+    left: 4.25em;
+    top: -0.5em;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.divPodcast .c1 {
+    position: relative;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: rgb(190, 190, 190);
+    border-radius: 50%;
+    left: 1.5em;
+    top: 2em;
+}
+
+.divPodcast .t1 {
+    position: relative;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: rgb(190, 190, 190);
+    border-radius: 2px;
+    left: 3em;
+    top: 1em;
+}
+
+.divPodcast .t2 {
+    position: relative;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: rgb(190, 190, 190);
+    border-radius: 2px;
+    left: 5.7em;
+    top: -0.2em;
+}
+
+.divPodcast .c2 {
+    position: relative;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: rgb(190, 190, 190);
+    border-radius: 50%;
+    left: 7.2em;
+    top: -0.2em;
+}
+
+@keyframes run {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fin Sección Podcast */
+
+/* Sección 360 */
+.div360 .iframe {
+    width: 100%;
+    height: 28vh;
+}
+
+.iconView360 {
+    position: absolute;
+    right: 10%;
+    font-size: 3rem;
+    color: white;
+}
+
+/* Fin Sección 360 */
+
+/* Sección Voces */
+
+.divVoces .card {
+    --background: linear-gradient(to left, #2f2bd6 0%, #a977ff 100%);
+    width: 90%;
+    height: 75%;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+}
+
+.divVoces .card::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+}
+
+.divVoces .card-info {
+    --color: transparent;
+    background: "#181818";
+    background-image: url("./../../images/img-project/OndaAudio.gif");
+    background-size: cover;
+    background-position-y: center;
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+    transition: background-image 0.5s;
+}
+
+.divVoces .card .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+}
+
+/*Hover*/
+.divVoces .card:hover::after {
+    opacity: 0;
+}
+
+.divVoces .card:hover .card-info {
+    font-size: 25px;
+    color: rgb(255, 0, 0);
+    transition: color 0.5s;
+    background-color: "#181818" !important;
+    transition: background-image 0.5s;
+}
+
+/* Fin Sección Voces */
+
+
+
+/* Sección podcast modal */
+.card {
+    color: white;
+    background-color: rgba(0, 0, 0, .8);
+    margin-top: 10px;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px 1px #737299;
+}
+
+.music-player-container {
+    /* background-image: url('../../images/img-project/Fondo 2.png'); */
+    background-size: cover;
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85));
+    backdrop-filter: blur(10px);
+    height: fit-content;
+    /* width: 35vw; */
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.title-music-container {
+    width: 80%;
+    height: 80%;
+    width: fit-content;
+    color: white;
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+.song-title {
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+.song-author {
+    margin-top: 0.1rem;
+    font-size: 12px;
+    color: rgb(167, 167, 167);
+    letter-spacing: 0.1px;
+}
+
+.controls-music-container {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.progress-song-container {
+    margin-top: 0.6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.progress-bar {
+    height: 3px;
+    border-radius: 3px;
+    width: 100%;
+    background-color: rgb(102, 102, 102);
+    position: relative;
+}
+
+.progress {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.time-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(167, 167, 167);
+    font-size: 12px;
+}
+
+.time-left {
+    margin-top: 0.3rem;
+}
+
+.main-song-controls {
+    height: 30px;
+    width: 100%;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon {
+    height: 100%;
+    width: auto;
+    opacity: 0.6;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+audio {
+    display: none;
+}
+
+.divArtistasModal-img {
+    background-image: url('./../../images/img-project/futureSuba/piezaArtistas.jpeg');
+    background-size: cover;
+    width: 100%;
+    height: inherit;
+}
+
+.divArtistasModalMapa {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch__title {
+    font-family: "Bungee", cursive;
+    font-size: 1rem;
+    color: #ffffe5;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.glitch__title:before,
+.glitch__title:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.glitch__title:before {
+    left: 2px;
+    text-shadow: -1px 0 #00ffea;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim 2s linear infinite alternate-reverse;
+}
+
+.glitch__title:after {
+    left: -2px;
+    text-shadow: -1px 0 #fe3a7f;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2s 1s linear infinite alternate-reverse;
+}
+
+.title_firts {
+    position: fixed;
+    top: 14%;
+    left: 32%;
+}
+
+.title_firts:before,
+.title_firts:after {
+    content: "MAPA MUSEO ITINERANTE:";
+}
+
+.title_second {
+    position: fixed;
+    top: 19%;
+    left: 29%;
+}
+
+.title_second:before,
+.title_second:after {
+    content: "SUBA ALETEA HACIA EL FUTURO";
+}
+
+@media (min-width: 321px) {
+    .divArtistas .card {
+        width: 290px;
+        height: 200px;
+    }
+
+    .divVoces .card {
+        width: 290px;
+        height: 200px;
+    }
+
+    .iconView360 {
+        right: 20%;
+    }
+
+    /* .divArtistasModal {
+        height: 25vh;
+    } */
+}
+
+@media (min-width: 576px) {
+    .divArtistas .card {
+        width: 55%;
+        height: 75%;
+    }
+
+    .divVoces .card {
+        width: 55%;
+        height: 75%;
+    }
+
+    .iconView360 {
+        right: 26%;
+    }
+
+    .glitch__title {
+        font-size: 1.5rem;
+    }
+
+    .title_firts {
+        top: 21% !important;
+        left: 34% !important;
+    }
+
+    .title_second {
+        top: 25% !important;
+        left: 29% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .divArtistas .card {
+        width: 96%;
+        height: 75%;
+    }
+
+    .divVoces .card {
+        width: 96%;
+        height: 75%;
+    }
+
+    .iconView360 {
+        right: 10%;
+    }
+
+    .glitch__title {
+        font-size: 1.5rem;
+    }
+
+    .title_firts {
+        top: 18% !important;
+        left: 33% !important;
+    }
+
+    .title_second {
+        top: 22% !important;
+        left: 30% !important;
+    }
+
+    /* .divArtistasModal {
+        height: 68vh;
+    } */
+}
+
+@media (min-width: 992px) {
+    .divArtistas .card {
+        width: 67%;
+        height: 85%;
+    }
+
+    .divVoces .card {
+        width: 67%;
+        height: 85%;
+    }
+
+    .iconView360 {
+        right: 25%;
+    }
+
+    .glitch__title {
+        font-size: 2rem;
+    }
+
+    .title_firts {
+        top: 17% !important;
+        left: 32% !important;
+    }
+
+    .title_second {
+        top: 21% !important;
+        left: 30% !important;
+    }
+
+    /* .divArtistasModal {
+        height: 87vh;
+    } */
+}
+
+@media (min-width: 1200px) {
+    .divArtistas .card {
+        width: 56%;
+        height: 73%;
+    }
+
+    .divVoces .card {
+        width: 56%;
+        height: 73%;
+    }
+
+    .iconView360 {
+        right: 25%;
+    }
+
+    .glitch__title {
+        font-size: 2.5rem;
+    }
+
+    .title_firts {
+        top: 14% !important;
+        left: 32% !important;
+    }
+    .title_second {
+        top: 19% !important;
+        left: 29% !important;
+    }
+
+    /* .divArtistasModal {
+        height: 99vh;
+    } */
+}
+
+@media (min-width: 1600px) {
+    .divArtistas .card {
+        width: 67%;
+        height: 67%;
+    }
+
+    .divVoces .card {
+        width: 67%;
+        height: 67%;
+    }
+
+    .card-iframe {
+        width: 67%;
+    }
+}
+
+.spinnerIcono {
+    /* background-image: linear-gradient(rgb(186, 66, 255) 35%,#2f2bd6); */
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px #2f2bd6;
+}
+
+.spinner {
+    width: 5%;
+    /* animation: spinning82341 1.7s linear infinite; */
+    text-align: center;
+    border-radius: 50px;
+    /* filter: blur(1px); */
+    /* box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px #2f2bd6; */
+    transition: width 1s;
+}
+
+.spinner1 {
+    width: 100%;
+    height: 100%;
+    /* animation: spinning823412 1.7s linear infinite; */
+    border-radius: 50px;
+    filter: drop-shadow(10px 9px 4px black);
+}
+
+.spinner:hover {
+    width: 7%;
+}
+
+/* .spinner1:hover{
+    transition: 0.5s;
+} */
+
+@keyframes spinning82341 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinning823412 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(89px, 9999px, 114px, 0);
+    }
+
+    5% {
+        clip: rect(20px, 9999px, 131px, 0);
+    }
+
+    10% {
+        clip: rect(5px, 9999px, 140px, 0);
+    }
+
+    15% {
+        clip: rect(99px, 9999px, 69px, 0);
+    }
+
+    20% {
+        clip: rect(123px, 9999px, 47px, 0);
+    }
+
+    25% {
+        clip: rect(60px, 9999px, 46px, 0);
+    }
+
+    30% {
+        clip: rect(160px, 9999px, 138px, 0);
+    }
+
+    35% {
+        clip: rect(200px, 9999px, 0px, 0);
+    }
+
+    40% {
+        clip: rect(57px, 9999px, 56px, 0);
+    }
+
+    45% {
+        clip: rect(91px, 9999px, 158px, 0);
+    }
+
+    50% {
+        clip: rect(8px, 9999px, 63px, 0);
+    }
+
+    55% {
+        clip: rect(90px, 9999px, 8px, 0);
+    }
+
+    60% {
+        clip: rect(10px, 9999px, 130px, 0);
+    }
+
+    65% {
+        clip: rect(5px, 9999px, 37px, 0);
+    }
+
+    70% {
+        clip: rect(61px, 9999px, 119px, 0);
+    }
+
+    75% {
+        clip: rect(140px, 9999px, 68px, 0);
+    }
+
+    80% {
+        clip: rect(112px, 9999px, 126px, 0);
+    }
+
+    85% {
+        clip: rect(71px, 9999px, 25px, 0);
+    }
+
+    90% {
+        clip: rect(103px, 9999px, 23px, 0);
+    }
+
+    95% {
+        clip: rect(40px, 9999px, 155px, 0);
+    }
+
+    100% {
+        clip: rect(92px, 9999px, 167px, 0);
+    }
+}

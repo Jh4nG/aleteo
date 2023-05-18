@@ -40,16 +40,16 @@
 		</div>
 
 
-		<div class="col-sm-12">
+		<div class="col-sm-12" align="center">
 			<br>
 			<h3 style="color:white;"><b style="background-color:black;">Comentarios</b></h3>
-			<div class="col-md-12" style="background-color:white;border-radius: 15px; overflow: scroll; max-height: 470px;">
+			<div class="col-md-6 cssComentarios" style="max-height: 470px;" align="left">
 				<br>
 				<textarea class="form-control" placeholder="Realizar Comentario " id="comentarioSerieWeb"></textarea>
 				<br>
 				<button class="btn btn-primary pull-right" id="btnComentarioSerieWeb" onclick="_SerieWeb.ingresarComent()">Comentar</button>
 				<br><br>
-				<div id="divOpinionesSerieWeb"></div>
+				<div id="divOpinionesSerieWeb" class="divOpiniones"></div>
 			</div>
 			<br>
 		</div>
@@ -63,6 +63,6 @@
   <?php require_once 'plantilla/footer.php'; ?>
   <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
   <?php include 'plantilla/script.php' ?>
-  <script type="text/javascript" src="js/serieweb.js"></script>
+  <script type="text/javascript" src="js/serieweb.js?v=2"></script>
 </body>
 </html>

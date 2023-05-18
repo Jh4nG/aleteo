@@ -32,16 +32,16 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12">
+    <div class="col-sm-12" align="center">
       <br>
       <h3 style="color:white">Comentarios</h3>
-      <div class="col-md-12" style="background-color:white;border-radius: 15px; overflow: scroll; max-height: 470px;">
+      <div class="col-md-6 cssComentarios" style="max-height: 470px;" align="left">
         <br>
         <textarea class="form-control" placeholder="Realizar Comentario " id="comentarioApoyanos"></textarea>
         <br>
         <button class="btn btn-primary pull-right" id="btnComentarioApoyanos" onclick="_Apoyanos.ingresarComent()">Comentar</button>
         <br><br>
-        <div id="divOpinionesApoyanos"></div>
+        <div id="divOpinionesApoyanos" class="divOpiniones"></div>
       </div>
       <br>
     </div>
@@ -50,6 +50,6 @@
     <?php require_once 'plantilla/footer.php'; ?>
     <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
     <?php include 'plantilla/script.php' ?>
-    <script type="text/javascript" src="js/apoyanos.js?v=<?php echo TIME?>"></script>
+    <script type="text/javascript" src="js/apoyanos.js?v=3"></script>
   </body>
 </html>

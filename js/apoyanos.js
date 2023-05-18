@@ -18,20 +18,7 @@ var _Apoyanos = (function (){
     }
 
     var listarOpiniones = () => {
-        $("#divOpinionesApoyanos").html('');
-        var ruta = 'Controller/Apoyanos.controller.php';
-        var data = {"metodo":"listarOpiniones"};
-        var type = 'post';
-        $.when(ajaxJson(ruta,data,type)).done((data)=>{
-            $.each(data, function(key, val){
-                var article = '<article>'+
-                                    '<b>Anónimo</b>'+
-                                    '<footer>'+val.texto_opinion+'</footer>'+
-                                    '<b>'+val.fecha_opinion_text+'</b>'+
-                                '</article><br>';
-                $("#divOpinionesApoyanos").append(article);            
-            });
-        });
+        _Aleteo.listarOpiniones("divOpinionesApoyanos",'Controller/Apoyanos.controller.php',"listarOpiniones");
     }
 
     var ingresarComent = () =>{

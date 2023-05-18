@@ -1,6 +1,7 @@
 // options
+let imgSrc = (!isMobile.mobilecheck()) ? "./images/img-project/podcast.png" : "./images/img-project/podcastVertical.png";
 var options = {
-  imgSrc: "./images/img-project/podcast.png",
+  imgSrc,
   containerName: "imgPodcast",
   grid: false,
   tileWidth: 80,
