@@ -141,17 +141,17 @@ var _SubaFuturo = (function (){
                     swal({
                         title: 'Informacion!',
                         text: 'Para cargar correctamente los contenidos de este espacio, por favor cambie la orientación del disposivo (módo horizontal).',
-                        icon: '<i class="swal_icon_device_left"></i>',
+                        icon: './images/img-project/giphy_devide_left.gif',
                         type: 'info',
                         buttons:{
                             confirm: {
                                 text : 'Aceptar',
-                                className : 'btn btn-primary',
+                                className : 'btn',
                                 value: true,
                             },
                             cancel: {
                                 visible: true,
-                                className: 'btn btn-danger',
+                                className: 'btn btn-cancel',
                                 value: false,
                             }
                         }
