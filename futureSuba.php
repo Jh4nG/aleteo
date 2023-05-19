@@ -207,6 +207,6 @@
         </div>
 
         <?php include 'plantilla/script.php' ?>
-        <script type="text/javascript" src="js/futueSuba.js?v=3"></script>
+        <script type="text/javascript" src="js/futueSuba.js?v=4"></script>
     </body>
 </html>

@@ -92,6 +92,13 @@ var _Aleteo = (function (){
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         });
+
+        setTimeout(()=>{
+            showHelpTooltip();
+        },2000);
+        setInterval(()=>{
+            showHelpTooltip();
+        },35000);
     }
     /** Trae los logos del Footer */
     var logoFooter = () =>{
@@ -186,6 +193,13 @@ var _Aleteo = (function (){
                 $(`#${div}`).append(article);
             });
         });
+    }
+
+    const showHelpTooltip = ()=>{ // muestra el mensaje de ayuda cada 35 segundo (cuenta los 5 segundos activos)
+        $('.BIA').tooltip({placement: 'left',trigger: 'manual',size:'12px'}).tooltip('show');
+        setTimeout(()=>{
+          $('.BIA').tooltip({placement: 'left',trigger: 'manual'}).tooltip('hide');
+        },5000);
     }
 
     return {

@@ -3,13 +3,22 @@ var _SubaFuturo = (function (){
 
     const init = ()=>{
         listarOpiniones();
-        // setTimeout(()=>{
+        setTimeout(()=>{
         //     let divVideo = $('#modal-body-lg-future-video-principal');
         //     divVideo.html(`<div class="col-12">
         //                     <video controls autoplay id="videoPrincipal" src="./images/img-project/futureSuba/videoMuestra.mp4" width="100%"></video>
         //                     </div>`);
         //     $('#modal-view-future-video-principal').modal('show');
-        // },2000);
+            if(isMobile.mobilecheck() == '1'){
+                $("html, body").animate({
+                    scrollTop: $('.divVoces').offset().top
+                }, 3000);
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 3000);
+            }
+        },2000);
+
     }
 
     const openModal = (view = '')=>{
@@ -173,7 +182,6 @@ var _SubaFuturo = (function (){
         $('#modal-title-lg').html(title);
         $('#modal-view-future').modal('show');
     }
-
 
     const calculateTime = (secs) =>{
         const minutes = Math.floor(secs / 60),
