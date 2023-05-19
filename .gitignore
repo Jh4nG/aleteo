@@ -8,3 +8,8 @@ images/img-project/Img603f0491de779.jpg
 Img*
 
 /Controller/Conexion.php
+
+*.sql
+*.mwb
+
+*.txt
