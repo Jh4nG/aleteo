@@ -1,6 +1,6 @@
 <?php include "plantilla/head.php";?>
 <?php include "plantilla/navbar.php"; ?>
-<link href="layout/styles/futureSuba.css" rel="stylesheet" type="text/css" media="all">
+<link href="layout/styles/futureSuba.css?v=2" rel="stylesheet" type="text/css" media="all">
     
     <div style="margin-top:50px;"></div>
     <body id="top" class="bgded imgFirts">
@@ -205,6 +205,13 @@
                 </div>
             </div>
         </div>
+
+        <footer>
+            <br>
+            <div class="footer-future-suba">
+                <img src="./images/img-project/futureSuba/footer.png" />
+            </div>
+        </footer>
 
         <?php include 'plantilla/script.php' ?>
         <script type="text/javascript" src="js/futueSuba.js?v=4"></script>

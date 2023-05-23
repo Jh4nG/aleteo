@@ -1,5 +1,5 @@
 .overlay::after {
-    height: 140%;
+    height: 170%;
 }
 
 .overlay::after {
@@ -22,6 +22,14 @@
 .iframe {
     border: 1px solid blue;
     border-radius: 15px;
+}
+
+.footer-future-suba{
+    position: relative;
+}
+
+.footer-future-suba img{
+    width: 100%;
 }
 
 /* Sección Artistas */
