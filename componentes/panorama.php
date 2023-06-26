@@ -49,7 +49,8 @@
         const panorama = new PANOLENS.ImagePanorama( `../images/img-project/futureSuba/${img}`);
         config = {  
           controlButtons: [],
-          autoRotate : true
+          autoRotate : true,
+          cameraFov: 120
         };
         const viewer = new PANOLENS.Viewer(config);
         viewer.add( panorama );
